@@ -21,12 +21,15 @@ $(function () {
     $window.on("wheel", function (e) {
         // console.log(e);
 
-        if (e.originalEvent.wheelDelta > 0) {
-            // 휠을 올렸을 때
-            $header.removeClass("hide");
-        } else {
-            // 휠을 내렸을 때
-            $header.addClass("hide");
-        }
+        // if (e.originalEvent.wheelDelta > 0) {
+        //     // 휠을 올렸을 때
+        //     $header.removeClass("hide");
+        // } else {
+        //     // 휠을 내렸을 때
+        //     $header.addClass("hide");
+        // }
+        // 상황조건연산자
+        // 조건? 참일때 동작 거짓일때 동작
+        e.originalEvent.wheelDelta > 0 ? $header.removeClass("hide") : $header.addClass("hide");
     });
 });
