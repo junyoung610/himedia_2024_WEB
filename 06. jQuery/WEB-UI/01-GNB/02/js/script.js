@@ -28,7 +28,7 @@ $(function () {
         //     // 휠을 내렸을 때
         //     $header.addClass("hide");
         // }
-        // 상황조건연산자
+        // 삼항조건연산자
         // 조건? 참일때 동작 거짓일때 동작
         e.originalEvent.wheelDelta > 0 ? $header.removeClass("hide") : $header.addClass("hide");
     });
