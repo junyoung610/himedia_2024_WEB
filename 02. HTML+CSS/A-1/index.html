@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>layout1</title>
+        <link rel="stylesheet" href="./reset.css" />
+        <style>
+            header {
+                /* w1200+h100+m0-a+bg */
+                width: 1200px;
+                height: 100px;
+                margin: 0 auto;
+                background: red;
+            }
+            .slider {
+                width: 1200px;
+                min-height: 300px; /* mih300 */
+                margin: 0 auto;
+                background: orange;
+            }
+            .contents {
+                width: 1200px;
+                min-height: 200px; /* mih200 세로는 mih을 사용할 것!*/
+                margin: 0 auto;
+                background: yellow;
+
+                display: flex;
+            }
+            .board {
+                width: 34%; /* w34p */
+                background: green;
+            }
+            .banner {
+                width: 33%; /* w33p */
+                background: blue;
+            }
+            .link {
+                width: 33%; /* w33p */
+                background: purple;
+            }
+            footer {
+                /* w1200+h100+m0-a+bg */
+                width: 1200px;
+                height: 100px;
+                margin: 0 auto;
+                background: black;
+
+                color: #fff;
+            }
+        </style>
+    </head>
+    <body>
+        <!-- header+main+footer -->
+        <header>
+            <div class="h-logo">h-logo</div>
+            <div class="navi">navi</div>
+        </header>
+        <main>
+            <!-- .slider+.contents -->
+            <div class="slider">slider</div>
+            <div class="contents">
+                <!-- .board+.banner+.link -->
+                <div class="board">board</div>
+                <div class="banner">banner</div>
+                <div class="link">link</div>
+            </div>
+        </main>
+        <footer>
+            <!-- .f-logo+.copy+.sns -->
+            <div class="f-logo">f-logo</div>
+            <div class="copy">copy</div>
+            <div class="sns">sns</div>
+        </footer>
+    </body>
+</html>

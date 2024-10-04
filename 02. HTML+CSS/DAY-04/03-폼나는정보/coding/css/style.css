@@ -1,0 +1,149 @@
+@charset 'utf-8';
+
+/* 디자인 초기화 */
+* {
+    /* m0+p0+bxbb */
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+ul,
+ol,
+li {
+    list-style: none; /* lisn */
+}
+img {
+    vertical-align: top; /* vat */
+}
+body {
+    font: 16px/1.4 "맑은고딕", "Malgun Gothic" sans-serif; /* f */
+    color: #666; /* c#666 */
+
+    /* 자간 조절 */
+    letter-spacing: -1.5px; /* lts-1 */
+    word-break: keep-all; /* wbka */
+}
+a {
+    text-decoration: none; /* tdn */
+    color: inherit;
+}
+a:hover {
+    text-decoration: none; /* tdn */
+    color: #434159; /* c#434159 */
+}
+
+/* 스타일 시작 */
+
+.info {
+    /* w1180+m0-a+bg#ff5 */
+    width: 1180px;
+    margin: 50px auto; /* 상하 50 좌우 auto(margin 만 들어감) */
+    background: #ff5;
+
+    padding: 42px 0; /* p42-0 */
+}
+.info h1 {
+    /* background: red; */
+    text-align: center; /* tac: 블록이 감싸는 인라인 요소의 가운데 정렬 */
+    font-weight: normal; /* fwn : 폰트가 두껍지 않다. */
+
+    /* fz40+c#ea002c */
+    font-size: 40px;
+    color: #ea002c;
+}
+.info-list {
+    /* background: green; bg */
+    display: flex; /* df */
+
+    justify-content: space-between; /* jcsb:남은 여백을 골구로 사이사이 */
+
+    margin-top: 36px; /* mt36 */
+}
+.info-list li {
+    /* bd */
+    /* border: 1px solid #000; */
+
+    /* w280+h185+bg#fff */
+    width: 280px;
+    height: 185px;
+    background: #fff;
+}
+.info-list li dl dt {
+    /* p11-20-13 = T RL B */
+    padding: 11px 20px 13px;
+    /* bg#434159 */
+    background: #434159;
+    color: #fff;
+
+    position: relative; /* posr: 직계 자손 절대 배치의 기준점 */
+}
+
+/* 가상요소 img */
+.info-list li dl dt::after {
+    content: ""; /* ct */
+    display: block;
+    /* w15+h15+bg#000 */
+    width: 15px;
+    height: 15px;
+    background: url(../images/alpha_pointer.png) no-repeat 0 0;
+
+    position: absolute; /* posa */
+    bottom: -15px;
+    left: 20px;
+}
+.info-list li dl dd {
+    padding: 20px; /* p20 */
+}
+
+/* hover */
+.info-list li:hover dl dt {
+    background: #ea002c;
+}
+.info-list li:hover dl dt::after {
+    background-position: 0 -15px;
+}
+
+/* test */
+.icons {
+    width: 1180px;
+    margin: 50px auto;
+    display: flex;
+}
+
+.test1 {
+    /* w40+h40+bg+m50-a */
+    width: 55px;
+    height: 55px;
+    background: #000 url(../images/sp_main.3e7d337e.png) no-repeat -500px -95px;
+    margin: 50px auto;
+}
+.test2 {
+    /* w40+h40+bg+m50-a */
+    width: 55px;
+    height: 55px;
+    background: #000 url(../images/sp_main.3e7d337e.png) no-repeat -185px -380px;
+    margin: 50px auto;
+}
+.test3 {
+    /* w40+h40+bg+m50-a */
+    width: 60px;
+    height: 55px;
+    background: #000 url(../images/sp_main.3e7d337e.png) no-repeat -340px -470px;
+    margin: 50px auto;
+}
+.test4 {
+    /* w40+h40+bg+m50-a */
+    width: 55px;
+    height: 55px;
+    background: #000 url(../images/sp_main.3e7d337e.png) no-repeat -185px -380px;
+    margin: 50px auto;
+}
+
+.test5 {
+    /* w40+h40+bg+m50-a */
+    width: 55px;
+    height: 55px;
+    background: #000 url(../images/sp_main.3e7d337e.png) no-repeat -185px -380px;
+    margin: 50px auto;
+}

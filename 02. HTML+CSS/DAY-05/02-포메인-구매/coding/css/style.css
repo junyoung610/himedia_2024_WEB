@@ -1,0 +1,99 @@
+@charset 'utf-8';
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+ul,
+ol,
+li {
+    /* lisn */
+    list-style: none;
+}
+img {
+    vertical-align: top; /* vat */
+}
+
+body {
+    font: 16px/1.6 "Pretendard", sans-serif;
+    margin: 0 auto;
+}
+a {
+    text-decoration: none;
+    color: inherit;
+}
+a:hover {
+    text-decoration: none;
+    color: #546220;
+}
+
+/* 마크업디자인 */
+
+.info {
+    margin: 0 auto;
+    width: 1890px;
+    /* background: #ff5; */
+    padding: 30px;
+}
+
+h1 {
+    text-align: center;
+    font-size: 32px;
+    color: #546220;
+}
+.info-list {
+    margin: 0 auto;
+    margin-top: 50px;
+}
+.card {
+    margin: 0 auto;
+    width: 1200px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+}
+.info-list li {
+    /* background: #f00; */
+    padding: 50px;
+    border: 1px solid #000;
+
+    position: relative;
+}
+
+.info-list dl {
+    text-align: center;
+    font-weight: 500;
+}
+
+.info-list img {
+    /* background: #000; */
+}
+.info-list dd {
+    color: #555;
+    margin-top: 20px;
+    font-size: 16px;
+}
+/* menu */
+.menu {
+    margin: 0 auto;
+    width: 245px;
+    background: #333;
+    color: #fff;
+    margin-top: 25px;
+    text-align: center;
+    padding: 20px;
+    font-size: 14px;
+}
+/* arrow */
+.arrow::after {
+    content: "";
+    display: block;
+    position: absolute;
+    top: 40%;
+    left: 95%;
+
+    width: 44px;
+    height: 28px;
+    background: url(../images/ico_arrow_03.png);
+}

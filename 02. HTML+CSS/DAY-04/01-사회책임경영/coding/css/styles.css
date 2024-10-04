@@ -1,0 +1,137 @@
+@charset 'utf-8';
+
+/* 디자인 초기화 */
+* {
+    /* m0p0 */
+    margin: 0; /* m0 */
+    padding: 0; /* p0 */
+    box-sizing: border-box; /* bsbd */
+}
+ul,
+ol,
+li {
+    list-style: none; /* lisn */
+}
+
+img {
+    vertical-align: top; /* vat */
+}
+
+body {
+    font: 14px/24px "맑은고딕", "Malgun Gothic", sans-serif; /* f */
+    letter-spacing: -1px; /* lts-1 */
+    color: #666; /* c#666 */
+    background: #f4f4f4; /* bg#f4f4f4 */
+
+    /* 어절단위 줄 바꿈 */ /* wbka */
+    word-break: keep-all;
+}
+
+a {
+    text-decoration: none; /* tdn */
+    color: inherit; /* c , inherit 강제상숙*/
+}
+a:hover {
+    text-decoration: underline; /* tdu */
+    color: #004a8d;
+}
+
+/* html 디자인 */
+.management {
+    /* w1200+m0-a+bg#ff5 */
+    width: 1200px;
+    margin: 0 auto;
+    /* background: #ff5; */
+
+    padding: 100px 0; /* p100-0 */
+}
+.management h1 {
+    display: none; /* dn */
+}
+.management-list {
+    /* background: green; */
+
+    display: flex; /* df */
+    gap: 16px; /* g16 */
+
+    /* fxwn: 기본값 아이템들을 no wrap해라 */
+    flex-wrap: nowrap;
+
+    /* fxww : 아이템들을 감싸라 = flex에서 줄바꿈을 하여 요소가 감쌀때 사용 */
+    flex-wrap: wrap;
+}
+.management-list li {
+    /* border: 1px solid #000; = 영역을 보기위해 설정하였음 */
+
+    /* w288+h384+bg#fff */
+    width: 288px;
+    height: 384px;
+    background: #fff;
+    /* 가로 크기는 부모에게 받지만 세로 크기는 자손이 그린다. */
+
+    text-align: center; /* tac: 블록요소사 감싸는 요소를 가운데로 */
+
+    /* trs.4s : A 상태와 B 상태의 변화를 (N)초 동안 구현*/
+    /* 부드러운 효과를 주는 것 HOVER가 들어가기 전에 미리 준비*/
+    transition: 0.4s;
+}
+/* 이미지 효과주는 것. */
+.management-list li figure {
+    overflow: hidden; /* oh: 영역을 넘쳐나는 애들을 숨겨라 */
+}
+.management-list li figure img {
+    filter: grayscale(1); /* 아무것도 없어도 회색이 되라 */
+    transition: 0.4s; /* trs.4s */
+}
+.management-list li:hover figure img {
+    transform: scale(1.3) rotate(-10deg); /*  trf */
+    /* rotate((N)deg)는 회전 = 양/음수 모두 가능 */
+    filter: grayscale(0); /* 선택된 요소의 사진만 컬러로 들어감 */
+}
+
+/* 요소 [lI] 를 올리는 것. */
+.management-list li:hover {
+    /* hover : 요소에 마우스를 올렸을 때 */
+    /* trfty */
+    /* 음수는 원래의 기준에서 위로 양수는 아래로 */
+    transform: translateY(-50px);
+
+    /* 그림자 : CSS drop-shadow 이용 */
+    /* 잔잔하게 그림자 설정할 것, 잘 모르면 디비컷 참고 */
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px,
+        rgba(0, 0, 0, 0.3) 0px 30px 60px -30px;
+
+    background: #004a8d;
+}
+
+.management-list li:hover * {
+    color: #fff;
+}
+.management-list li dl {
+    padding: 22px 44px 30px; /* p22-44-30 = 위-좌우-아래 */
+}
+
+.management-list li dl dt {
+    /* fwb+fz20+c#004a8d */
+    font-weight: bold;
+    font-size: 20px;
+    color: #004a8d;
+}
+.management-list li dl dd {
+    margin-top: 0; /* mt0 */
+}
+/* CSS 이미지 마크업 */
+.management-list li dl::after {
+    content: ""; /* ct */
+    /* w35+h35+bg */
+    width: 35px;
+    height: 35px;
+    background: url(../images/arr.jpg) no-repeat 50%;
+
+    display: block; /* db */
+    margin: 20px auto 0; /* m20-a-0 */
+}
+
+.management-list li:hover dl::after {
+    background: url(../images/arr-on.jpg) no-repeat 50%;
+}

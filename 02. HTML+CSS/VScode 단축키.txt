@@ -1,0 +1,10 @@
+ctrl + B : 탐색기 보기 끄기
+
+ctrl + / : 주석 토글
+alt + shfit + A : 나란히 주석 토글
+
+alt+ shfit + 밑으로 가는 화살표 : 현재 줄 복사
+
+ctrl +  Space :  emmet 실행
+
+alt + l + o : Live Server 실행

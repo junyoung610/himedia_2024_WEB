@@ -1,0 +1,24 @@
+복사: ctrl + insert // 붙여넣기: shift + insert
+저장소 하위의 모든 폴더를 깃이 관리 - 중첩해서 만들지 말 것
+
+
+
+** 저장소 만들기 **
+1. git init
+2. git status
+3. git add .
+4. git commit -m "커밋메시지 작성"
+5. git remote add origin (주소)
+6. git remote -v
+7. git push origin main
+
+** 저장소 만든 후 업데이트 **
+1. git add .
+2. git commit -m "커밋메시지 작성"
+3. git push origin main
+
+** 저장소 복제방법 **
+
+git clone (저장소 주소)
+
+git clone https://github.com/junyoung610/himedia_2024_WEB.git

@@ -1,0 +1,149 @@
+@charset 'utf-8';
+/* 브라우저의 디자인 초기화 */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+ul,
+ol,
+li {
+  list-style: none; /* lisn */
+}
+img {
+  vertical-align: top; /* vat */
+}
+
+body {
+  font: 15px/1.6 sans-serif;
+  color: #666; /* c#666 */
+}
+.home-service {
+  text-align: center; /* tac */
+
+  /* w1085+m0-a+bg#ff5 */
+  width: 1085px;
+  margin: 0 auto;
+  /* background: #ff5; */
+  padding: 45px 0; /* p45-0 = 위아래 45px 양옆은 0 */
+}
+.title-box {
+  /* background: #f00; bg#f00 */
+  text-align: center; /* tac */
+}
+.title-box h2 {
+  /* fz24+c */
+  font-size: 24px;
+  color: #000;
+}
+.title-box h2 p {
+  margin-top: 10px; /* mt10 */
+}
+.home-service ul {
+  /* background: #5f5; bg#5f5 */
+  margin-top: 35px; /* mt35 */
+  display: flex; /* df */
+  justify-content: space-between; /* jcsb = 균등분배*/
+}
+.home-service ul li {
+  /* w301+h394+bd */
+  width: 301px;
+  height: 394px;
+  /* border: 1px solid #000; */
+}
+
+.home-service ul li dl {
+  margin-top: 10px; /* mt10 */
+}
+.home-service ul li dl dt {
+  /* fz18+c#000 */
+  font-size: 18px;
+  color: #000;
+}
+.home-service ul li dl dt dd {
+  margin-top: 10px; /* mt10 */
+}
+.process {
+  background: #f7f7f7; /* bg#f7f7f7 */
+  padding: 100px 0; /* p100-0 */
+}
+
+.process .inner {
+  /* w1131+m0-a+bg#5f5 */
+  width: 1131px;
+  margin: 0 auto;
+}
+
+.process ol {
+  background: #5f5;
+  display: flex; /* df */
+  justify-content: space-between; /* jcsb = 컨텐츠 영역을 나눠 가져라*/
+  margin-top: 40px; /* mt40 */
+}
+
+.process ol li {
+  border: 1px solid #000; /* bd */
+  /* w342+h354+bg#fff+bdrs10 */
+  width: 342px;
+  height: 354px;
+  background: #fff;
+  border-radius: 10px;
+  /* p50-25-40 위-양쪽-하단 */
+  padding: 50px 25px 40px;
+  text-align: center; /* tac */
+}
+
+.process ol li strong {
+  color: red;
+}
+
+.process ol li strong::after {
+  content: "";
+  /* db+w100+h110+bg */
+  display: block;
+  width: 100px;
+  height: 110px;
+
+  /* m30-a-0 위-양옆-하단 */
+  margin: 30px auto 0;
+}
+/* .process ol li h3::before */
+/* :=가상 클래스 , ::=가상요소(태그) */
+/* 단, ol요소로 html을 제작해야함 */
+.process ol li:nth-child(1) strong::after {
+  background: url(../images/buy_step1.png) no-repeat 0 0;
+  /* 배경이미지작업: no-repeat단축키:nop = 반복없이 x, y기준으로 찼다. */
+}
+.process ol li:nth-child(2) strong::after {
+  background: url(../images/buy_step2.png) no-repeat 0 0;
+  /* 배경이미지작업: no-repeat단축키:nop = 반복없이 x, y기준으로 찼다. */
+}
+.process ol li:nth-child(3) strong::after {
+  background: url(../images/buy_step3.png) no-repeat 0 0;
+  /* 배경이미지작업: no-repeat단축키:nop = 반복없이 x, y기준으로 찼다. */
+}
+
+.process ol li h3 {
+  margin-top: 20px;
+}
+.process ol li p {
+  margin-top: 15px;
+}
+
+/* 가상요소 */
+/* .process ol li h3::before {
+  :=가상 클래스 , ::=가상요소(태그)
+  content: "BEFORE"; ct:필수
+  color: red;
+  font-size: 30px;
+}
+.process ol li h3::after {
+  :=가상 클래스 , ::=가상요소(태그)
+  content: ""; ct:필수
+  display: block;
+  w20+h20+bdrs100p+bg
+  width: 20px;
+  height: 20px;
+  border-radius: 100%;
+  background: #000;
+} */

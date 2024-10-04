@@ -1,0 +1,196 @@
+@charset 'urf-8';
+@import url("https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css");
+:root {
+    /* 다양한 변수를 선언 */
+    --main-color: #133984;
+    --tetle-color: #222;
+    --text-color: #666;
+    --line-color: rgba(0, 0, 0, 0.2);
+    --basic-transition: all ease-out 0.4s;
+    --white10: rgba(255, 255, 255, 0.1);
+    --white100: rgba(255, 255, 255, 1);
+
+    font-size: 100%; /* fz100p = 16px */
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+a:hover {
+    text-decoration: underline; /* tdu: 밑줄제거 */
+    color: var(--main-color);
+}
+
+body {
+    font: 1rem/1.3 Pretendard, sans-serif;
+    color: var(--text-color);
+}
+
+.hidden {
+    /* 숨기는 명령 */
+    position: absolute;
+    margin: -1px;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+}
+
+.inner {
+    /* w1200+m0-a+bg#ff5 */
+    width: 1200px;
+    height: 100%; /* 부모에게서 (#header) 가져옴 */
+    margin: 0 auto;
+    /* background: #ff5; */
+}
+
+#header {
+    /* h91+bdb+bg#fff */
+    height: 91px;
+    border-bottom: 1px solid var(--line-color);
+    background: #fff;
+}
+
+#header nav {
+    /* background: orange; */
+    display: flex;
+    justify-content: space-between;
+    height: 100%; /* 부모에게서 (#header) 가져옴 */
+    align-items: center; /* 중앙으로 가는 것 */
+}
+
+.gnb {
+    display: flex;
+    margin-left: auto;
+    margin-right: 4px;
+}
+
+.gnb li a {
+    display: block;
+    padding: 10px 22px;
+    /* border: 1px solid #000; */
+    font-weight: 700;
+    color: var(--tetle-color);
+}
+
+.util-menu {
+    align-self: flex-start;
+}
+
+.util-menu > a {
+    display: block;
+    /* p43-29-5 */
+    padding: 37px 29px 11px;
+    border: 1px solid var(--line-color);
+}
+
+.visual {
+    max-width: 1920px;
+    height: 496px;
+    margin: 0 auto;
+}
+
+.slider {
+    position: relative;
+    height: 100%;
+}
+
+.slide-img {
+    height: 100%;
+}
+.slide-img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.slide-btn {
+    position: absolute;
+    top: 50%;
+    width: 70px;
+    height: 70px;
+    border: 1px solid var(--white10);
+    transition: var(--basic-transition);
+    transform: translateY(-50%); /* trfty */
+    background: no-repeat 50%;
+    background-size: 30% auto;
+}
+
+.slide-btn:hover {
+    border: 1px solid var(--white100);
+}
+
+.btn-prev {
+    left: 30px;
+    background-image: url(../images/icon_ar_l.png);
+}
+.btn-next {
+    right: 30px;
+    background-image: url(../images/icon_ar_R.png);
+}
+
+.links {
+    /* p40-0-55 */
+    padding: 40px 0 55px;
+}
+
+.link-list {
+    display: flex;
+}
+
+.link-list li {
+    /* border: 1px solid #000; */
+    /* w33.3333p */
+    width: 33.3333%;
+}
+
+.link-list li a {
+    display: flex;
+    gap: 20px;
+    align-items: center;
+}
+
+.link-list li a dl dt {
+    font-size: 13px;
+    font-weight: 700;
+    color: var(--main-color);
+}
+.link-list li a dl dt dd {
+    font-size: 13px;
+    margin-top: 5px;
+}
+
+footer {
+    border-top: 1px solid var(--line-color);
+    padding: 50px 0;
+}
+
+.foot-wrap {
+    display: flex;
+    justify-content: center;
+    gap: 25px;
+}
+
+.foot-menu {
+    display: flex;
+    margin-left: -10px;
+}
+
+.foot-menu li a {
+    display: block;
+    padding: 0 10px;
+    font-size: 12px;
+
+    border-right: 1px solid var(--line-color);
+}
+
+.foot-menu li:last-child a {
+    border: none;
+}
+
+.copyrlght {
+    margin-top: 12px;
+    font-size: 9px;
+}

@@ -1,0 +1,191 @@
+@charset 'UTF-8';
+/* 폰트 사용자가 점속시 강제 다운후 이용 */
+@import url("https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css");
+
+/* 디자인초기화 */
+* {
+    /* m0+p0+bxbd */
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+ul,
+ol,
+li {
+    /* lisn */
+    list-style: none;
+}
+img {
+    vertical-align: top; /* vat */
+}
+
+body {
+    font: 16px/1.6 "Pretendard", sans-serif;
+}
+a {
+    text-decoration: none;
+    color: inherit;
+}
+a:hover {
+    text-decoration: none;
+    color: #546220;
+}
+
+/* menu */
+.menu {
+    /* w1078+m0-a+bg#ff5 */
+    width: 1078px;
+    margin: 0 auto;
+    /* background: #ff5; */
+}
+.menu h1 {
+    display: none;
+}
+/* menu-list */
+.menu-list {
+    /* background: green; */
+    display: flex; /* df , 축이 가로로 생겨나면서 조그라 들음 */
+
+    /* 부모크기안에 감싸고 싶어요 fxww */
+    flex-wrap: wrap;
+
+    gap: 60px 29px; /* g60-29 */
+}
+.menu-list li {
+    width: 340px;
+    height: 410px;
+    background: #fff;
+
+    position: relative; /* 직계자손(badge) 절대배치 기준점 */
+}
+/* badge */
+.badge {
+    display: block;
+    width: 40px;
+    height: 40px;
+    background: no-repeat 50%;
+
+    position: absolute;
+    top: 20px;
+    left: 21px;
+
+    color: transparent; /* 글씨 색상 투명 */
+}
+
+.badge-best {
+    background-image: url(../images/ico_menu_best.png);
+}
+.badge-hot {
+    background-image: url(../images/ico_menu_hot.png);
+}
+.badge-new {
+    background-image: url(../images/ico_menu_new.png);
+}
+
+/* menu-con */
+.menu-con {
+    text-align: center;
+    padding-top: 15px;
+}
+.menu-con strong {
+    /* fw500+fz20+c */
+    font-weight: 600;
+    font-size: 20px;
+    color: #000;
+}
+.menu-con p {
+    /* fz14+c#999 */
+    font-size: 14px;
+    color: #999;
+}
+
+/* 상세정보 */
+.detail-into {
+    background: rgba(45, 104, 11, 0.7);
+
+    position: absolute; /* posa */
+    top: 0;
+    left: 0;
+    width: 100%; /* w100p : 절대 배치된 요소는 가로크기가 쪼그라듣다.퍼센트는 항상 부모기준으로 함 */
+    height: 340px;
+
+    text-align: center; /* 블록요소가 감싸고 있는 인라인 요소를 가운데로 */
+
+    /* p70-22-58 */
+    padding: 70px 22px 58px;
+    /* op0 */
+    opacity: 0;
+}
+
+.detail-into dl dt {
+    /* fw700+fz22+c#fff */
+    font-weight: 600;
+    font-size: 22px;
+    color: #fff;
+}
+
+.detail-into dl dt + dt {
+    font-weight: 500;
+    font-size: 16px;
+    color: #e9b863;
+    margin-top: 10px; /* mt10 */
+}
+
+.detail-into dl dd {
+    color: rgba(255, 255, 255, 0.6);
+    margin-top: 15px; /* mt15 */
+}
+
+/* 가상요소 + */
+
+.detail-into .more {
+    display: block;
+    /* w38+h38+bg */
+    width: 38px;
+    height: 38px;
+    /* background: #000; */
+    margin: 30px auto 0;
+
+    position: relative; /* posr */
+}
+.detail-into .more::before {
+    content: "";
+    display: block;
+    /* w100p+h1+bg#fff */
+    width: 100%;
+    height: 1px;
+    background: #fff;
+
+    /* posa+t50p+l50p */
+    position: absolute;
+    top: 50%;
+    left: 50%;
+
+    transform: translate(-50%, -50%); /* trft */
+}
+.detail-into .more::after {
+    content: "";
+    display: block;
+    /* posa+t50p+l50p */
+    position: absolute;
+    top: 50%;
+    left: 50%;
+
+    transform: translate(-50%, -50%) rotate(90deg); /* trft */
+
+    /* w100p+h1+bg#fff */
+    width: 1px;
+    height: 100%;
+    background: rgb(255, 255, 255);
+}
+/* hover effect */
+.menu-list li:hover .detail-into {
+    opacity: 1; /* op1 */
+    transition: 0.4s; /* trs.4s 부드럽게 */
+}
+
+.menu-list li:hover .detail-into .more::after {
+    transform: translate(-50%, -50%) rotate(0deg);
+    transition: 0.4s 0.4s;
+}

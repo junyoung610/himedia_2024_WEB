@@ -1,0 +1,40 @@
+Git 설치
+https://git-scm.com/
+
+명령어
+01. git --version
+
+관리자 정보(커밋) 남김
+02. git config --global user.name "junyoung610"
+03. git config --global user.email "junyoungkim610@gmail.com"
+04. git config --global user.name // 입력정보확인
+05. git config --global user.email // 입력정보확인
+
+master -> main 으로 변경하는 셋팅
+06. git config --global init.defaultBranch main 
+07. git branch -M main
+08. git status
+
+정보확인 후 창 닫고, 업로드할 폴더(루트)에서 Git CMD 창 열기
+
+1. git init // 초기화
+
+2. git add .
+3. git commit -m "저장소초기화"
+4. git status
+5. git log
+6. exit
+
+vs code
+Select Default Profile > git
+
+업로드-git 연결방법
+git remote add origin (저장소주소입력)
+
+git remote add origin https://github.com/junyoung610/WEB-UI.git
+
+git remote -v
+
+
+git push 원격이름 브랜치이름
+git push origin main

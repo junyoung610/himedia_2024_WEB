@@ -1,0 +1,101 @@
+@charset 'utf-8';
+
+.inner {
+  /* w94r+m0-a+bg#ff5 */
+  width: 94rem;
+  margin: 0 auto;
+  background: #ff5;
+}
+
+nav {
+  height: 8rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #5f5;
+}
+
+.logo a {
+  display: block;
+  /* w4.3r+h5.2r+bg */
+  width: 4.3rem;
+  height: 5.2rem;
+  background: url(../img/apple-logo.png) no-repeat 50% / cover;
+  /* 100% auto = cover */
+}
+
+.gnb {
+  display: flex;
+  margin-left: auto; /* mla */
+  margin-right: 1rem;
+}
+.gnb li a {
+  display: block;
+  padding: 1rem 1.8rem;
+  border: 1px solid #000;
+
+  font-weight: 700;
+  font-size: 1.4rem;
+}
+
+.util-meun {
+}
+.btn-login {
+  /* w12.4r+h4r+bg+bdrs30 */
+  width: 12.4rem;
+  height: 4rem;
+  background: var(--main-color);
+  border-radius: 30px;
+  /* display: block; */
+  color: #fff;
+  font-weight: 700;
+  font-size: 1.4rem;
+  text-transform: uppercase; /* ttu */
+
+  /* txet 중앙정렬 절대배치 */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.btn-login:hover {
+  background: var(--main-dark-color);
+  color: #fff;
+}
+
+/* visual */
+.visual {
+  max-width: 144rem;
+  margin: 0 auto;
+  height: 60rem;
+  background: url(../img/main-pc.jpg) no-repeat 0 0 / cover fixed;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.visual-titel {
+  color: #fff;
+  /* background: #f55; */
+  text-align: center;
+}
+.visual-titel h2 {
+  font-weight: 700;
+  font-size: 6rem;
+}
+.visual-titel p {
+  font-weight: 600;
+  font-size: 3rem;
+}
+
+/* about */
+.about {
+  padding: 5.5rem 0 6rem;
+  text-align: center;
+}
+.sec-title p {
+  padding: 0 5rem;
+  font-weight: 500;
+  margin-top: 1rem;
+}

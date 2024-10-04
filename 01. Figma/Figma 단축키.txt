@@ -1,0 +1,24 @@
+ctrl + + : 화면 확대
+ctrl + - : 화면 축소
+ctrl + 0 : 100% 크기로보기
+shift + 1 : 화면에 꽉 채우기
+
+ctrl + [ : 뒤쪽으로
+ctrl + ] : 앞쪽으로
+
+ctrl + shift [ : (한방에) 뒤쪽으로
+ctrl + shift ] : (한방에) 앞쪽으로
+
+ctrl + G : 그룹만들기
+ctrl + Shift + G : 그룹해제
+
+ctrl + D : 복제
+
+Shift + A : 오토 레이아웃 만들기
+Alt + Shift + A : 오토 레이아웃 해제
+
+ctrl + shift + k : 이미지/동영상 넣기
+
+ctrl + alt + k : 콤퍼런스 만들기
+
+ctrl + alt + B : Deaach instance / 콤퍼런스 해제

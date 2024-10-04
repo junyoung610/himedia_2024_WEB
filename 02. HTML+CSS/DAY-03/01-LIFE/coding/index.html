@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LIFE</title>
+    <style>
+        /* 선택자 { 속성 : 값 } */
+        /* *= 모든 요소에 설정 할 수 있는 선택자 */
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        body{
+            font: 12px "굴림", Gulim, sans-serif;
+            color: #666;
+
+            /* 배경은 어느 공간에 들어가는지 중요함 */
+            background-color: #ff5;
+            background-image: url(./images/bg.jpg);
+            /* background-repeat: no-repeat; */
+            /* background-repeat: no-repeat; : 이미지를 반복하지 마라 */
+            background-position: 100px 200px;
+
+            /* 단축속성 */
+            /* background: #ff5 url(./images/bg.jpg) no-repeat 100px 200px; */
+        }
+
+        div{
+            background: #fff;
+            width: 900px;
+            margin: 50px auto;
+            text-align: center;
+            padding: 50px;
+        }
+        li{
+            margin-top: 50px;
+        }
+        .my-bast{
+            background-color: pink;
+        }
+    </style>
+</head>
+<!-- 사용 빈도가 높은 태그는 겹친다 -->
+<body>
+    <div>
+        <!-- h1+ul>li*6>(figure>img)+p -->
+        <h1>LIFE</h1>
+        <ul>
+            <li>
+                <figure><img src="./images/pic1.jpg" alt="비눗방울을 부는 여자"></figure>
+                <p>소박하든 원대하든 모든 꿈은 아름답다.<br>
+                    그러나 꿈만 꾸고 있는 사람은<br>
+                    전혀 아름답지 않다.</p>
+            </li>
+            <li>
+                <figure><img src="./images/pic2.jpg" alt=""></figure>
+                <p>나이를 더해가는 것만으로 사람은 늙지 않는다. <br>
+                    이상을 버릴 때 비로소 늙는다. <br>
+                    세월은 피부에 주름살을 늘려가지만 열정을 잃으면 영혼이 주름진다.</p>
+            </li>
+            <li>
+                <figure><img src="./images/pic3.jpg" alt=""></figure>
+                <p>거북이가 토끼를 이길 수 있었던 이유는<br>
+                    토끼는 경쟁자를 생각하며 달렸고<br>
+                    거북이는 목표를 향해 달렸기 때문이야.
+                </p>
+            </li>
+            <li>
+                <figure><img src="./images/pic4.jpg" alt=""></figure>
+                <p>세상은 공평하다. <br>
+                    누구에게나 불공평하니까...
+                </p>
+            </li>
+            <li class="my-bast">
+                <figure><img src="./images/pic5.jpg" alt=""></figure>
+                <p>먼저 겁내지 말 것... <br>
+                    먼저 걱정하지 말 것... <br>
+                    여기는 미래가 아니라 과거가 될 오늘이므로...
+                </p>
+            </li>
+            <li>
+                <figure><img src="./images/pic6.jpg" alt=""></figure>
+                <p>미래는 많은 이름을 갖고 있다.<br>
+                    약한 자에게는 '도달할 수 없는 것'<br>
+                    두려워하는 자에게는 '알려지지 않는 것'<br>
+                    용감한 자에게는 '기회'
+                </p>
+            </li>
+        </ul>
+    </div>
+</body>
+
+</html>

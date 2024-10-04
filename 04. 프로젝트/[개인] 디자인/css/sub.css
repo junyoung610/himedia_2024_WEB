@@ -1,0 +1,627 @@
+@charset 'utf-8';
+
+/* brandstory */
+
+.brandstory {
+    margin: 0 auto;
+
+    padding-bottom: 25rem;
+}
+
+.visual {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin: 0 auto;
+    text-align: center; /* 텍스트를 가운데 정렬 */
+}
+
+.brandstory h2 {
+    margin-top: 6.5rem;
+    font-weight: 700;
+    font-size: 4.4rem;
+    text-align: center;
+    position: relative;
+    color: #000;
+}
+
+.story-h {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.story-h h2 {
+    margin-top: 6.5rem;
+    font-weight: 700;
+    font-size: 4.4rem;
+    color: #000;
+}
+
+.story-h > img {
+    position: relative;
+    width: 100%;
+    max-width: 275px;
+    height: auto;
+    margin-top: 1rem;
+}
+/*  */
+.title {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 8.2rem;
+    width: 33.3rem;
+    background: var(--background-image); /* 배경 이미지 설정 */
+    margin-top: 1rem; /* 상단 여백 추가 */
+    color: #fff; /* 텍스트 색상 */
+    font-size: 3.2rem;
+    font-weight: 700;
+    position: relative;
+}
+
+.story-h p {
+    font-weight: 700;
+    font-size: 3.2rem;
+    color: #691a02;
+}
+
+.story-body {
+    margin-top: 6.5rem;
+    padding: 5rem 0;
+    display: flex;
+    gap: 10rem;
+}
+
+.b-story-text1 {
+    padding: 4rem 3rem;
+}
+.b-story-text1 p.day {
+    font-weight: 700;
+    font-size: 3.6rem;
+    color: var(--main-color);
+    margin: 0;
+}
+.b-story-text1 h3 {
+    font-weight: 700;
+    font-size: 4rem;
+    color: #000;
+}
+.b-story-text1 p {
+    font-weight: 400;
+    font-size: 2rem;
+    margin-top: 2.5rem;
+    color: #333;
+}
+
+.story-body2 {
+    margin-top: 6.5rem;
+    padding: 5rem;
+    display: flex;
+    gap: 10rem;
+
+    background: var(--background-image);
+}
+.b-story {
+    display: flex;
+    gap: 10rem;
+    padding: 4rem 3rem;
+}
+.b-story-text2 p.day {
+    font-weight: 700;
+    font-size: 3.6rem;
+    color: var(--main-color);
+    margin: 0;
+}
+.b-story-text2 h3 {
+    font-weight: 700;
+    font-size: 4rem;
+    color: #000;
+}
+.b-story-text2 p {
+    font-weight: 400;
+    font-size: 2rem;
+    margin-top: 2.5rem;
+    color: #333;
+}
+
+/* s-product : 제품페이지 CSS */
+
+.s-product-h {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+}
+.s-product-h h2 {
+    font-weight: 700;
+    font-size: 4.4rem;
+    color: #000;
+}
+.s-product-h > img {
+    position: relative;
+    width: 100%;
+    max-width: 275px;
+    height: 100%;
+}
+
+.product-gnb li a {
+    display: block;
+    padding: 1rem 4rem;
+    /* fw700+fz2r+c */
+    font-weight: 700;
+    font-size: 2rem;
+    color: var(--title-clor);
+    position: relative;
+}
+
+.s-product-list {
+    margin-top: 6rem;
+    /* background: yellow; */
+    display: flex;
+    gap: 5rem 3.5rem;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.s-product-list li {
+    margin: 0 auto;
+    background: #ffffff;
+    border-radius: 3rem;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 10px 15px -3px, rgba(0, 0, 0, 0.05) 0px 4px 6px -2px;
+    display: block;
+    position: relative;
+    padding-bottom: 4.5rem;
+}
+
+.s-product-list li figure {
+    width: 30rem;
+    height: 25rem;
+}
+.s-product-list li figure img {
+    border-radius: 2.5rem;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.s-product-list li dl {
+    margin-top: 2.5rem;
+    padding: 0 3.5rem;
+    position: relative;
+}
+
+.s-product-list dl dt {
+    font-weight: 700;
+    font-size: 2.4rem;
+    color: var(--main-color);
+}
+.s-product-list dl dd {
+    font-weight: 400;
+    font-size: 2rem;
+    color: var(--text-color);
+}
+
+/* 제품별 페이지 CSS */
+.product {
+    padding-top: 5rem;
+    padding-bottom: 20rem;
+}
+
+.visual {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin: 0 auto;
+    text-align: center; /* 텍스트를 가운데 정렬 */
+}
+
+.product-h {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+}
+
+.product-h h2 {
+    font-weight: 700;
+    font-size: 4.4rem;
+    color: #000;
+}
+
+.product-h > img {
+    position: relative;
+    width: 102rem;
+    /* width: 100%; */
+    max-width: 275px;
+    height: 100%;
+}
+
+.product-h p {
+    font-weight: 700;
+    font-size: 3.2rem;
+    color: #691a02;
+}
+.s-product {
+    margin-top: 5rem;
+    margin-bottom: 20rem;
+}
+/* product-body */
+.product-body {
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-around;
+    /* gap: 5rem; */
+    margin-top: 5rem;
+}
+
+.product-text {
+    padding: 4rem;
+}
+.product-text strong {
+    font-size: 2.5rem;
+}
+.product-text h3 {
+    font-weight: 700;
+    font-size: 5rem;
+    color: var(--main-color);
+}
+
+.product-text p {
+    margin-top: 2.5rem;
+    font-size: 2.5rem;
+}
+.product-body figure img {
+    width: 51rem;
+    height: 51rem;
+}
+
+/* product-info */
+.product-info {
+    margin-top: 15rem;
+    text-align: center;
+    font-weight: 700;
+    font-size: 3.5rem;
+    color: #000;
+}
+
+table {
+    width: 100%;
+    margin-top: 5rem;
+}
+
+.product-info thead tr th {
+    height: 5rem;
+    padding: 1.5rem;
+    font-weight: 700;
+    font-size: 2rem;
+    text-align: center;
+    color: #fff;
+    background: var(--main-color);
+    border: 1px solid #000;
+}
+.product-info thead tr th:nth-of-type(1) {
+    text-align: right;
+}
+.product-info tbody tr td {
+    width: 33.3333%;
+    height: 5rem;
+    padding: 1.5rem;
+    font-weight: 500;
+    font-size: 2rem;
+    border: 1px solid #000;
+}
+.product-info tbody tr td:nth-of-type(1) {
+    text-align: right;
+}
+.product-info tbody tr td:nth-of-type(2) {
+    text-align: center;
+}
+.product-info tbody tr td:nth-of-type(3) {
+    text-align: center;
+}
+
+/* product-btn */
+.product-btn {
+    display: flex;
+    justify-content: center;
+    gap: 3.6rem;
+    margin-top: 10rem;
+}
+.btn {
+    min-width: 19.5rem;
+    height: 5.1rem;
+    border: 1px solid var(--main-color);
+    background: #fff;
+    padding: 0 4.8rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1.2rem;
+    font-weight: 700;
+    font-size: 1.8rem;
+    color: var(--main-color);
+}
+/* contents-customer */
+.contents-customer {
+    margin-top: 5rem;
+    margin-bottom: 20rem;
+}
+.contents-con {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+}
+.contents-con h2 {
+    font-weight: 700;
+    font-size: 4.4rem;
+    color: #000;
+}
+.contents-con > img {
+    position: relative;
+    width: 100%;
+    max-width: 275px;
+    height: 100%;
+}
+
+/* contents-table */
+.contents-table table {
+    width: 100%;
+    margin-top: -5rem;
+}
+.contents-table {
+    margin-top: 15rem;
+    text-align: center;
+    font-weight: 700;
+    font-size: 3.5rem;
+    color: #000;
+}
+
+.contents-table thead tr th {
+    height: 5rem;
+    padding: 1.5rem;
+    font-weight: 700;
+    font-size: 2rem;
+    text-align: center;
+    color: #fff;
+    background: var(--main-color);
+    border: 1px solid #000;
+}
+.contents-table thead tr th:nth-of-type(1) {
+    text-align: right;
+}
+.contents-table tbody tr td {
+    height: 5rem;
+    padding: 2.5rem;
+    font-weight: 500;
+    font-size: 2rem;
+    /* border: 1px solid #000; */
+    border-bottom: 1px solid #000;
+}
+.contents-table tbody tr td:nth-of-type(1) {
+    width: 5%;
+    text-align: center;
+}
+.contents-table tbody tr td:nth-of-type(2) {
+    width: 20%;
+    text-align: center;
+}
+.contents-table tbody tr td:nth-of-type(3) {
+    width: 60%;
+    text-align: left;
+}
+.contents-table tbody tr td:nth-of-type(4) {
+    width: 15%;
+    color: #555;
+    text-align: center;
+}
+/* 페이지 이동 CSS */
+.page {
+    margin: 5rem auto 0;
+    text-align: center;
+    width: 50%;
+}
+
+.pagination {
+    list-style: none;
+    display: inline-block;
+    padding: 0;
+    margin-top: 20px;
+}
+
+.pagination li {
+    display: inline;
+    text-align: center;
+}
+
+.pagination a {
+    float: left;
+    display: block;
+    font-size: 2rem;
+    text-decoration: none;
+    padding: 5px 12px;
+    color: #000000;
+    line-height: 1.5;
+}
+
+.pagination a.active {
+    cursor: default;
+    color: #ffffff;
+}
+
+.pagination a:active {
+    outline: none;
+}
+
+.modal .num {
+    margin-left: 3px;
+    padding: 0;
+    width: 30px;
+    height: 30px;
+    line-height: 30px;
+    border-radius: 100%;
+}
+
+.modal .num:hover {
+    background-color: var(--main-color);
+    color: #ffffff;
+}
+
+.modal .num.active,
+.modal .num:active {
+    background-color: var(--main-color);
+    cursor: pointer;
+}
+
+.arrow-left {
+    width: 0;
+    height: 0;
+    border-top: 10px solid transparent;
+    border-bottom: 10px solid transparent;
+    border-right: 10px solid rgb(62, 62, 121);
+}
+.t-btn {
+    display: none;
+}
+/* 반응형 */
+@media (max-width: 1024px) {
+    #header nav {
+        height: 10rem;
+    }
+    .inner {
+        width: 90%; /* width 값을 96.8rem에서 100%로 변경해 화면에 맞게 조정 */
+    }
+    .gnb {
+        display: none;
+    }
+
+    .slide {
+        width: 100%; /* 130vw에서 100%로 변경해 오버플로우 방지 */
+        height: auto; /* 높이를 고정하지 않고 이미지에 따라 자동 조정 */
+        margin: 0;
+        overflow: hidden;
+    }
+    .slide > img {
+        width: 100%; /* 슬라이드 이미지의 너비를 100%로 변경해 화면에 맞게 조정 */
+        height: auto; /* 높이를 auto로 변경하여 비율 유지 */
+        object-fit: cover;
+        margin: 0;
+    }
+    .m-product {
+        padding: 0;
+    }
+    .m-product h3 {
+        font-size: 2.5rem; /* 텍스트가 너무 크지 않도록 줄임 */
+    }
+    .product-list {
+        flex-direction: column;
+        gap: 2rem; /* 간격을 조금 줄임 */
+    }
+    .product-list li {
+        width: 95%; /* 중복된 width 속성 중 하나만 남김 */
+    }
+    .product-list li figure {
+        width: 20.5%; /* 고정된 크기 대신 100%로 변경하여 유동적으로 맞춤 */
+        height: auto; /* 높이도 자동 조정 */
+    }
+    .product-list li figure img {
+        width: 100%; /* 이미지를 figure에 맞게 채움 */
+        height: auto;
+    }
+
+    .product-list li dl {
+        width: 60rem;
+    }
+    .product-list li a {
+        position: relative;
+        display: flex;
+        justify-content: space-between;
+        gap: 1.5rem; /* 간격을 조금 줄여 화면 공간 활용 */
+    }
+    .product-list a::after {
+        content: "";
+        display: none;
+    }
+
+    .t-btn {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 10%;
+        height: 5%;
+        margin: 7rem auto 7rem;
+    }
+    .t-btn img {
+        width: 2rem;
+    }
+
+    .story h3 {
+        font-size: 2.5rem;
+    }
+    .story-con {
+        gap: 6rem;
+    }
+    .story-con figure img {
+        width: 39rem;
+        height: 25.8rem;
+    }
+    .story-text {
+        padding: 0;
+    }
+    .story-text strong {
+        font-weight: 700;
+        font-size: 2.7rem;
+    }
+    .story-text p {
+        font-weight: 400;
+        font-size: 2.3rem;
+    }
+    .story-text a {
+        font-weight: 500;
+        font-size: 1.6rem;
+    }
+    .story-text a b {
+        margin: 0;
+    }
+
+    /* event-con */
+    .event-con {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 1rem;
+        width: 100%;
+    }
+    .event-con figure {
+        width: 85%;
+    }
+
+    .bg-text {
+        margin: 0;
+        padding: 0;
+        width: 95%;
+        height: auto;
+        border-radius: 2rem;
+    }
+    .event-text h4 {
+        font-size: 2.5rem;
+    }
+    .world-list {
+        width: 100%;
+        flex-direction: column;
+        align-items: center;
+        gap: 1rem;
+    }
+    .world-list li p {
+        margin-top: 2.2rem;
+    }
+    .btn-top {
+        display: none;
+    }
+}

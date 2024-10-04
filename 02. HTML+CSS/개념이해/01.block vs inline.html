@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>block vs inline</title>
+    <style>
+        a, strong{
+            width: 200px;
+            height: 200px;
+            display: block;
+            background: red;
+        }
+        h1, p{
+            width: 200px;
+            height: 200px;
+            background: blue;
+            display: inline;
+        }
+    </style>
+</head>
+<body>
+        <!-- 모든 요소는 블록레벨요소와 인라인레벨요소로 나뉜다. -->
+         <h1>h1</h1>
+         <h2>h2</h2>
+         <p>p</p>
+         <img src="" alt="img">
+         <a href="">a</a>
+         <strong>strong</strong>
+         <!-- ul>li*4{list item$} -->
+         <ul>
+            <li>list item1</li>
+            <li>list item2</li>
+            <li>list item3</li>
+            <li>list item4</li>
+         </ul>
+         <!-- dl>dt+dd -->
+         <dl>
+            <dt>dt</dt>
+            <dd>dd</dd>
+         </dl>
+         <div>
+            div
+         </div>
+         <!-- header+main+footer -->
+         <header>header</header>
+         <main>main</main>
+         <footer>footer</footer>
+         <em>em</em>
+         <span>span</span>
+         <!-- Block vs inline
+          - (대분분의) 요소는 블록과 인라인으로 구별된다.
+          - 블록요소는 가로 한줄을 다 차지
+          - 인라인요소는 여유가 있을 경우, 옆자리를 다른 요소에 양보
+          - 오직! 블록만 크기와 여백을 가진다. -->
+</body>
+</html>

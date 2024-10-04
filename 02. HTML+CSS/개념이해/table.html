@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>table tag</title>
+  </head>
+  <!-- 셀의 구체적인 구분 방법 id/headers -->
+  <!-- row: 가로 행 / clo: 세로 열 -->
+  <body>
+    <table border="1">
+      <caption>
+        최강 음원 다운로드(단위:백만)
+      </caption>
+
+      <!-- 세로열의 그룹핑 -->
+      <!-- colgroup>col*3 -->
+      <colgroup>
+        <!-- span="N"으로 그룹을하며 class을 주어 css에서 디자인 제어 / 그룹하는 clo이 나란히 있어야 하고 그룹할 clo은 주석처리-->
+        <col span="2" class="song" />
+        <!-- <col /> -->
+        <col />
+      </colgroup>
+
+      <!-- 옛날에 이 방식으로 셀의 크기를 주었지만, 지금은 css에서 불러와서 조절 가능함. -->
+      <!-- <colgroup>
+        <col style="width: 20%" />
+        <col style="width: 40%" />
+        <col style="width: 40%" />
+      </colgroup> -->
+
+      <!-- thead <제목> -->
+      <thead>
+        <tr>
+          <th scope="col">곡명</th>
+          <th scope="col">가수</th>
+          <th scope="col">다운로드</th>
+        </tr>
+      </thead>
+
+      <!-- (rows/cols)pan="N" (세로/가로)행 합치기/ N만큼의 td만 있어야 함. 안그러면 표가 틀어짐 -->
+
+      <!-- tbody <본문> -->
+      <tbody>
+        <tr>
+          <td>나와같다면</td>
+          <td>김연우</td>
+          <td>5,896</td>
+        </tr>
+        <tr>
+          <td>여러분</td>
+          <td rowspan="2">임재범</td>
+          <td>7,895</td>
+        </tr>
+        <tr>
+          <td>편지</td>
+          <!-- <td>BMK</td> -->
+          <td>6,032</td>
+        </tr>
+        <tr>
+          <td>늪</td>
+          <td>김범수</td>
+          <td>5,398</td>
+        </tr>
+      </tbody>
+
+      <!-- tfoot <소계/합계> -->
+      <tfoot>
+        <tr>
+          <td colspan="2">다운로드 합계</td>
+          <td>25,221</td>
+        </tr>
+      </tfoot>
+    </table>
+  </body>
+</html>

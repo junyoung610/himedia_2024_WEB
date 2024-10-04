@@ -1,0 +1,67 @@
+@charset 'utf-8';
+
+/* 디자인 초기화 */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;/* bxbb */
+}
+
+ul, ol, li{
+    list-style: none;
+}
+
+img{
+    vertical-align: top;
+}
+
+body{
+    font: 20px/1.6 'Pertandard',sans-serif;
+    color: #555;
+    background: #EDFFFE;/* bg:background 단축키 */
+}
+
+.advice{
+    width: 1321px;
+    /* background: yellow; */
+    margin: 0 auto; /* m0-a : width가 있는 블룩요소 가운데 정렬 */
+    padding: 100px 0;/* p100-0 */
+}
+h1{/* 주석은 단축키임 */
+    text-align: center;/* tac */
+    font-size: 40px; /* fz40 */
+    color: #000; /* c */
+}
+.advice ul{
+    margin-top: 78px;/* mt78 */
+
+    display: flex;/* df */
+    flex-wrap: wrap;/* fxww : 줄 바꿈이 필요할 때 */
+    gap: 48px 20px;
+}
+
+.advice ul li{
+    width: 427px;
+    height: 514px;
+    background: #fff;/* bgfff */
+    text-align: center;/* tac */
+    padding: 40px;/* p40 */
+
+    /* 도형을 둥글게하는 설정 */
+    border-radius: 20px;/* bdrs20 */
+
+    /* 카드 박스 그림자 설정 */
+    /* box-shadow: inset hoff voff blur #000; = bxsh */
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
+}
+
+.advice ul li p{
+    margin-top: 40px;/* mt40 */
+    height: 189px; /* h189 */
+    /* background: tomato; bg*/
+    text-align: left;/* ta:l */
+}
+.advice ul li strong{
+    margin-top: 40px;/* mt40 */
+    display: block;/* db: 블록 요소먼 크기를 가진다 */
+}

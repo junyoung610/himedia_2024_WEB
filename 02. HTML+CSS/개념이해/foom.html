@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>foom tag</title>
+  </head>
+  <body>
+    <form action="#">
+      <fieldset>
+        <legend>필수입력항목</legend>
+
+        <input type="text" placeholder="아이디" />
+
+        <label for="userPwd">비밀번호</label>
+        <input type="password" id="userPwd" />
+
+        <input type="radio" id="yes" />
+        <label for="yes">YES</label>
+        <input type="radio" id="no" />
+        <label for="no">NO</label>
+
+        <input type="checkbox" id="check" />
+        <label for="check">동의합니다.</label>
+        <input type="file" />
+      </fieldset>
+
+      <fieldset>
+        <legend>선택입력항목</legend>
+        <select>
+          <option value="#">엣지</option>
+          <option value="#">크롬</option>
+          <option value="#">사파리</option>
+          <option value="#">파이어폭스</option>
+        </select>
+        <select>
+          <optgroup label="서울특별시">
+            <option value="#">강남구</option>
+            <option value="#">강서구</option>
+            <option value="#">서대문구</option>
+          </optgroup>
+          <optgroup label="경기도">
+            <option value="#">고양시</option>
+            <option value="#">파주시</option>
+            <option value="#">부천시</option>
+          </optgroup>
+        </select>
+        <!-- <textarea>(여기는)</textarea> (여기는)공간은 반드시 아무것도 쓰지 않고 붙어서 쓴다. -->
+        <textarea cols="50" rows="10" placeholder="의견을 남겨주세요."></textarea>
+      </fieldset>
+
+      <!-- submit : 전송을 위한-->
+      <!-- reset : 취소(재입력)을 위한-->
+      <!-- button : 텍스트 버튼 -->
+      <!-- image : 이미지 버튼-->
+
+      <button type="submit">확인</button>
+      <button type="reset">취소</button>
+      <button type="button">UI로써의 버튼</button>
+    </form>
+  </body>
+</html>

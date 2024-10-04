@@ -1,0 +1,43 @@
+@charset 'utf-8';
+@import url("https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css");
+
+:root {
+  /* fz62.5p */
+  font-size: 62.5%; /* 10px --> 1rem */
+
+  --main-color: #0ebfdd;
+  --main-dark-color: #009fdd;
+  --title-color: #222;
+  --text-color: #666;
+}
+
+hr,
+.hidded {
+  position: absolute;
+  margin: -1px;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+}
+
+body {
+  font: 2rem/1.5 pretendard, sans-serif;
+  color: var(--text-color);
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+a:hover {
+  text-decoration: none;
+  color: var(--main-color);
+}
+
+.sec-title {
+  font-weight: 700;
+  font-size: 4.4rem;
+  color: var(--main-color);
+  text-align: center;
+}

@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>login | imaginary</title>
+    <link rel="shortcut icon" href="./img/favicon.png" type="image/x-icon" />
+    <link rel="stylesheet" href="./css/reset.css" />
+
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+
+    <link rel="stylesheet" href="./css/common.css" />
+    <link rel="stylesheet" href="./css/sub.css" />
+  </head>
+  <body>
+    <a href="#main" class="hidden">본문바로가기</a>
+    <hr />
+    <!-- header#header+main#main+footer#footer -->
+    <!-- s:header -->
+    <header id="header">
+      <!-- .inner>nav>h1.logo+ul.gnb+.util-menu -->
+      <div class="inner">
+        <nav>
+          <h1 class="logo">
+            <a href="index.html"><i class="hidden">imaginary</i></a>
+          </h1>
+          <ul class="gnb">
+            <li><a href="company.html">company</a></li>
+            <li><a href="franchise.html">franchise</a></li>
+            <li><a href="notice.html">notice</a></li>
+            <li><a href="financial.html">financial</a></li>
+          </ul>
+          <div class="util-menu">
+            <a href="login.html"><i class="hidden">로그인</i></a>
+          </div>
+        </nav>
+      </div>
+    </header>
+    <hr />
+    <!-- //e:header -->
+
+    <!-- s:main -->
+    <main id="main" class="login">
+      <!-- s:sub visual -->
+      <section class="sub-visual">
+        <!-- .inner>.sub-title>h2>b{financial} -->
+        <div class="inner">
+          <div class="sub-title">
+            <h2><b>login</b></h2>
+          </div>
+        </div>
+      </section>
+
+      <!-- s: 회원로그인 -->
+      <section class="login-warp">
+        <h3>회원 로그인</h3>
+        <p>
+          원활한 행사 진행을 위해 회원제를 실시하고 있습니다.<br />
+          회원가입자에게는 현장에서 안전체험 이수증이 발급됩니다.
+        </p>
+        <div class="form-warp">
+          <form action="#">
+            <fieldset>
+              <legend><i class="hidden">회원 로그인</i></legend>
+
+              <div class="select-member">
+                <div>
+                  <input type="radio" id="mem-type1" />
+                  <label for="mem-type1">개인회원</label>
+                </div>
+                <div>
+                  <input type="radio" id="mem-type2" />
+                  <label for="mem-type2">기업회원</label>
+                </div>
+              </div>
+              <div class="f-row">
+                <input type="text" id="user-id" />
+                <label for="user-id">아이디를 입력하세요</label>
+              </div>
+              <div class="f-row">
+                <input type="password" id="user-pw" />
+                <label for="user-pw">비밀번호를 입력하세요</label>
+              </div>
+              <button type="submit" class="btn-login">로그인</button>
+              <div class="save-id">
+                <div>
+                  <input type="checkbox" id="save-id" />
+                  <label for="save-id">아이디 저장</label>
+                </div>
+              </div>
+            </fieldset>
+          </form>
+        </div>
+        <div class="btn-wrap">
+          <a href="#" class="btn">아이디/비밀번호 찾기</a>
+          <a href="#" class="btn">회원가입</a>
+        </div>
+      </section>
+      <!-- //e: 회원로그인 -->
+    </main>
+    <!-- //e:main -->
+    <hr />
+
+    <!-- s:footer -->
+    <footer id="footer">
+      <div class="inner">
+        <!-- .foot-con>.foot-logo+address -->
+        <div class="foot-con">
+          <div class="foot-logo">
+            <a href="#"><i class="hidden">imaginary</i></a>
+          </div>
+          <address>
+            <dl>
+              <dt>Address</dt>
+              <dd>경기도 고양시 일산동구 탄중로 416</dd>
+
+              <dt>Tel</dt>
+              <dd>031.866.1234</dd>
+
+              <dt>Fax</dt>
+              <dd>02.6008.1234</dd>
+
+              <dt>E-mail</dt>
+              <dd>imaginary@gmail.com</dd>
+            </dl>
+            <p>Copyright &copy; 2024 imaginary. All Right Reserved</p>
+          </address>
+        </div>
+      </div>
+    </footer>
+    <!-- //e:footer -->
+
+    <!-- button.btn-top>i.hidden{top} -->
+    <a href="#top" class="btn-top"><i class="hidden">top</i></a>
+
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="./js/common.js"></script>
+  </body>
+</html>

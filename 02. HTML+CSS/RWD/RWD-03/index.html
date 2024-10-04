@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Agency</title>
+        <link rel="stylesheet" href="./css/reset.css" />
+        <link href="https://cdn.jsdelivr.net/npm/remixicon@4.3.0/fonts/remixicon.css" rel="stylesheet" />
+        <link rel="stylesheet" href="./css/common.css" />
+        <link rel="stylesheet" href="./css/style.css" />
+    </head>
+    <body>
+        <!-- 모바일용 메뉴
+        <div class="mobile-menu">
+            <strong class="mobile-logo"><i class="hidden">webfluent</i></strong>
+            <ul class="mobile-gnb">
+                <li><a href="#">about</a></li>
+                <li><a href="#">team</a></li>
+                <li><a href="#">work</a></li>
+                <li><a href="#">contact</a></li>
+                <li><a href="#">login</a></li>
+            </ul>
+            <button type="button" class="btn-close">
+                <i class="hidden">close</i>
+            </button>
+        </div> -->
+
+        <!-- a.hidden{본문 바로가기} -->
+        <a href="#main" class="hidden">본문 바로가기</a>
+
+        <!-- header#header+main#main+footer#footer -->
+
+        <!-- s: header -->
+        <header id="header">
+            <div class="inner">
+                <nav>
+                    <h1 class="logo">
+                        <a href="#">
+                            <i class="ri-apple-fill"></i>
+                            <i class="hidden">Agency</i></a
+                        >
+                    </h1>
+                    <ul class="gnb">
+                        <li><a href="#">about</a></li>
+                        <li><a href="#">team</a></li>
+                        <li><a href="#">work</a></li>
+                        <li><a href="#">contact</a></li>
+                    </ul>
+                    <div class="util-meun">
+                        <button class="menu">
+                            <i class="ri-menu-3-line"></i>
+                            <i class="hidden">menu</i>
+                        </button>
+                        <button class="btn-login">
+                            <i class="ri-login-box-line"></i>
+                            <i class="hidden">login</i>
+                        </button>
+                    </div>
+                </nav>
+            </div>
+        </header>
+        <!-- //e: header -->
+        <hr />
+
+        <!-- s: main -->
+        <main id="main">
+            <!-- s: visual -->
+            <section class="visual">
+                <div class="video-wrap">
+                    <video src="./video/vl_main_video.mp4" autoplay muted loop></video>
+                    <!-- autoplay:자동재생 muted: 음소거 -->
+                </div>
+                <div class="visual-title">
+                    <h2>an interior design company</h2>
+                    <p>
+                        Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia
+                        consequat duis enim velit mollit. Exercitation veniam consequat sunt nostrud amet.
+                    </p>
+                    <a href="#" class="btn-basic btn-cta">request work</a>
+                </div>
+            </section>
+            <!-- //e: visual -->
+
+            <!-- s: about -->
+            <section class="about">
+                <div class="inner">
+                    <h3 class="sec-title">about us</h3>
+                    <div class="about-con">
+                        <figure>
+                            <img src="./img/pic-aboot-us.jpg" alt="aboot us" />
+                        </figure>
+                        <p>
+                            Amet minim mollit non deserunt ullamco est sit aliqua dolor do<br />amet sint. Velit officia
+                            consequat duis enim velit mollit.<br />Exercitation veniam consequat sunt nostrud amet.
+                        </p>
+                    </div>
+                </div>
+            </section>
+            <!-- //e: about -->
+
+            <!-- s: team -->
+            <section class="team">
+                <div class="inner">
+                    <h3 class="sec-title">team</h3>
+                    <ul class="team-list">
+                        <!-- li*4>(figure>img)+dl>dt+dd -->
+                        <li>
+                            <figure><img src="./img/Ellipse-1.png" alt="" /></figure>
+                            <dl>
+                                <dt>Courtney Henry</dt>
+                                <dd>Founder & CEO</dd>
+                            </dl>
+                        </li>
+                        <li>
+                            <figure><img src="./img/Ellipse-2.png" alt="" /></figure>
+                            <dl>
+                                <dt>Devon Lane</dt>
+                                <dd>President of Sales</dd>
+                            </dl>
+                        </li>
+                        <li>
+                            <figure><img src="./img/Ellipse-3.png" alt="" /></figure>
+                            <dl>
+                                <dt>Wade Warren</dt>
+                                <dd>Web Designer</dd>
+                            </dl>
+                        </li>
+                        <li>
+                            <figure><img src="./img/Ellipse-4.png" alt="" /></figure>
+                            <dl>
+                                <dt>Arlene McCoy</dt>
+                                <dd>Marketing Coordinator</dd>
+                            </dl>
+                        </li>
+                    </ul>
+                    <a href="" class="btn-basic btn-work-with">btn-work-with</a>
+                </div>
+            </section>
+            <!-- //e: team -->
+
+            <!-- s: work -->
+            <section class="work">
+                <div class="inner">
+                    <h3 class="sec-title">work</h3>
+                    <ul class="work-list">
+                        <!-- li*5>a>figure>img[src="./img/work-pic$.png"] -->
+                        <li>
+                            <a href="#">
+                                <div class="work-recent">
+                                    <figure><img src="./img/work-pic1.png" alt="" /></figure>
+                                    <!-- .work-info>h4+p -->
+                                    <div class="work-info">
+                                        <h4>Amet minim mollit non deserunt</h4>
+                                        <p>
+                                            Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint.
+                                            Velit officia consequat duis enim velit mollit. Exercitation veniam...
+                                        </p>
+                                    </div>
+                                </div>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <figure><img src="./img/work-pic2.png" alt="work-pic2" /></figure>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <figure><img src="./img/work-pic3.png" alt="work-pic3" /></figure>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <figure><img src="./img/work-pic4.png" alt="work-pic4" /></figure>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <figure><img src="./img/work-pic5.png" alt="work-pic5" /></figure>
+                            </a>
+                        </li>
+                    </ul>
+                    <div class="request-wrap">
+                        <input type="text" placeholder="enter your e-mail" />
+                        <button class="btn-request" type="submit"><b>request work</b></button>
+                    </div>
+                </div>
+            </section>
+            <!-- //e: work -->
+
+            <!-- s: map -->
+            <section class="map">
+                <h3 class="hidden">찾아오시는 길</h3>
+                <div class="map-wrap">
+                    <iframe
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d12628.65292661333!2d126.7800456708098!3d37.692365381737645!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x357c902e548726cb%3A0xb0f5c93a62f6f0de!2z6rOg67SJ7IKw!5e0!3m2!1sko!2skr!4v1726710388291!5m2!1sko!2skr"
+                        allowfullscreen=""
+                        loading="lazy"
+                        referrerpolicy="no-referrer-when-downgrade"
+                    ></iframe>
+                </div>
+            </section>
+            <!-- //e: map -->
+        </main>
+        <!-- //e: main -->
+        <hr />
+
+        <footer id="footer">
+            <div class="inner">
+                <div class="foot-wrap">
+                    <p class="copyright">© Company.LLC 2022</p>
+                    <ul class="sns-list">
+                        <li>
+                            <a href="#"><i class="ri-facebook-fill"></i><i class="hidden">facebook</i></a>
+                        </li>
+                        <li>
+                            <a href="#"><i class="ri-instagram-line"></i><i class="hidden">instagram</i></a>
+                        </li>
+                        <li>
+                            <a href="#"><i class="ri-youtube-line"></i><i class="hidden">youtube</i></a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </footer>
+        <script src="./js/script.js"></script>
+    </body>
+</html>

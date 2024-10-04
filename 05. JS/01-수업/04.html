@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>토글 형식의 조작 - flag 🚩</title>
+        <style>
+            body {
+                background: #fff;
+            }
+            body.dark {
+                background: #333;
+            }
+            .warp > a {
+                background: #000;
+                padding: 10px 30px;
+                color: #fff;
+                font-size: 2rem;
+            }
+            .dark .warp > a {
+                background: tomato;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="warp">
+            <a href="#">다크모드</a>
+            <p>
+                Lorem ipsum dolor sit, amet consectetur adipisicing elit. Repudiandae at officia, perspiciatis delectus
+                assumenda modi molestias. Repellendus labore, id, sint fuga veritatis illum, accusamus eligendi libero
+                beatae qui maiores eaque!
+            </p>
+        </div>
+    </body>
+    <script>
+        const $body = document.body;
+        const btnChange = document.querySelector(".warp > a");
+
+        let flag = true;
+
+        btnChange.addEventListener("click", function () {
+            if (flag) {
+                $body.classList.add("dark");
+                flag = false;
+            } else {
+                $body.classList.remove("dark");
+                flag = true;
+            }
+        });
+    </script>
+</html>

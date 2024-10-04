@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>길교회</title>
+    <link rel="stylesheet" href="css/styles.css">
+
+    <link rel="icon" href="img/icon.png" type="image/x-icon" sizes="16x16">
+
+</head>
+
+<body>
+    <!-- 헤더 섹션 -->
+    <div class="h-inner">
+        <header>
+            <div class="logo">
+                <a href="0. index.html"><img src="img/logo.png" alt="로고"></a>
+            </div>
+            <div class="navi">
+                <ul class="menu">
+                    <li><a href="1. Welcome.html">환영합니다</a></li>
+                    <li><a href="2. Introduction.html">소개</a></li>
+                    <li><a href="3. nextgeneration.html">다음세대</a></li>
+                    <li><a href="4. sermon&praise.html">말씀 찬양</a></li>
+                    <li><a href="5. news.html">소식</a></li>
+                </ul>
+            </div>
+        </header>
+    </div>
+    <!-- 슬라이드 섹션 -->
+    <div class="slide">
+        <div>
+            <a href="#"><img src="img/slide/slide1.png" alt="슬라이드 이미지"></a>
+            <a href="#"><img src="img/slide/slide2.png" alt="슬라이드 이미지"></a>
+            <a href="#"><img src="img/slide/slide3.png" alt="슬라이드 이미지"></a>
+        </div>
+    </div>
+    <!-- 서비스 및 링크 섹션 -->
+    <div class="items">
+        <div class="box1">
+            <a href="https://www.youtube.com"><img src="img/00. index/banner1.png" alt=""></a>
+        </div>
+        <div class="live">
+            <a href="https://www.youtube.com"><img src="img/00. index/banner2.png" alt=""></a>
+        </div>
+        <div class="bible">
+            <a href="http://bible.godpia.com/index.asp"><img src="img/00. index/banner3.png" alt=""></a>
+        </div>
+    </div>
+    <!-- 콘텐츠 섹션 -->
+    <div class="content">
+        <h2>2024년 06월 30일 예배안내</h2>
+        <p>2024년 6월 30일 오후 조별로 히브리서 11장 암송대회가 있습니다.</p>
+    </div>
+    <!-- 교회소식 섹션 -->
+    <div class="contact" id="contact">
+        <div class="btn">
+            <a href="#">
+                <h2>교회소식</h2>
+            </a>
+        </div>
+        <div class="news">
+            <p><a href="5-5. news.html">2024.05.10. 금요기도회 주보<b>2024.05.09</b></a></p>
+            <p><a href="#" onclick="openPopup()">2024.05.03. 금요기도회 안내<b>2024.05.01</b></a></p>
+            <p><a href="5-3. news.html">2024.04.26. 금요기도회 안내<b>2024.04.25</b></a></p>
+            <p><a href="5-2. news.html">2024.04.19. 금요기도회 주보<b>2024.04.18</b></a></p>
+        </div>
+        <div class="banner">
+            <div class="banner1">
+                <a href="2. Introduction.html">
+                    <img src="img/banner/001.png" alt="">
+                </a>
+            </div>
+            <div class="banner2">
+                <a href="4. sermon&praise.html">
+                    <img src="img/banner/002.png" alt="">
+                </a>
+            </div>
+            <div class="banner3">
+                <a href="#">
+                    <img src="img/banner/003.png" alt="">
+                </a>
+            </div>
+            <div class="banner4">
+                <a href="5. news.html">
+                    <img src="img/banner/004.png" alt="">
+                </a>
+            </div>
+        </div>
+        <div class="map">
+            <a href="https://naver.me/G8mAaJ18">
+                <img src="img/banner/005.png" alt="">
+            </a>
+        </div>
+    </div>
+    <!-- 하단 정보 섹션 -->
+    <div class="f-box">
+        <div class="f-box2">
+            <div class="f-sub">
+                <div class="call">
+                    <p>Tel. 031-875-7288</p>
+                </div>
+                <div class="contract">
+                    <a href="6. Termsandconditions.html">이용약관</a>
+                    <a href="7. PersonalInformationProcessingPolicy.html">개인정보처리방침</a>
+                    <a href="8. Copyright.html">저작권안내</a>
+                </div>
+            </div>
+            <div class="information">
+                <p>
+                    담임목사 : 최준봉<br>
+                    주소 : 경기 의정부시 호국로 1077<br>
+                    팩스 : 070-8286-7285
+                </p>
+            </div>
+        </div>
+    </div>
+    </div>
+    
+    <!-- popup -->
+    <style>
+        /* 팝업 이미지를 감싸는 외부 컨테이너 스타일 */
+        .popup {
+            display: none;
+            /* 초기에는 숨김 처리 */
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background-color: rgb(255, 255, 255);
+            padding: 20px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            z-index: 1000;
+            /* 다른 요소들보다 위에 표시되도록 */
+        }
+
+        /* 닫기 버튼 스타일 */
+        .close-btn {
+            color: #000;
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            cursor: pointer;
+        }
+
+        .popup img {
+            width: 500px;
+        }
+    </style>
+    </head>
+
+
+
+
+    <!-- 팝업 컨테이너 -->
+    <div id="popup" class="popup">
+        <!-- 닫기 버튼 -->
+        <span class="close-btn" onclick="closePopup()">&times;</span>
+        <!-- 팝업 이미지 -->
+        <img src="img/popup_img.png" alt="Popup Image">
+    </div>
+
+    <!-- JavaScript -->
+    <script>
+        // 팝업 열기 함수
+        function openPopup() {
+            document.getElementById('popup').style.display = 'block';
+        }
+
+        // 팝업 닫기 함수
+        function closePopup() {
+            document.getElementById('popup').style.display = 'none';
+        }
+    </script>
+    <!--  -->
+
+    <!-- 페이지 하단 -->
+    <footer>
+        <p>&copy; 2024 교회. 모든 권리 보유.</p>
+    </footer>
+    <!-- 외부 JavaScript 파일 -->
+    <script src="js/scripts.js"></script>
+
+</body>
+
+</html>

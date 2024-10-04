@@ -1,0 +1,338 @@
+@charset 'utf-8';
+
+.product-list {
+    margin-top: 6rem;
+    /* background: yellow; */
+
+    align-items: center;
+    display: flex;
+    justify-content: space-between;
+}
+
+.product-list li {
+    margin: 0 auto;
+
+    background: #ffffff;
+    border-radius: 3.2rem;
+
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 10px 15px -3px, rgba(0, 0, 0, 0.05) 0px 4px 6px -2px;
+
+    display: block;
+    position: relative;
+}
+
+.product-list li:hover {
+    background: var(--main-color);
+}
+.product-list li {
+    width: 30%;
+}
+.product-list li figure img {
+    border-radius: 3.2rem;
+}
+
+.product-list li dl {
+    margin-top: 2.5rem;
+    padding: 0 3.5rem;
+    position: relative;
+}
+
+.product-list dl dt {
+    font-weight: 700;
+    font-size: 3.2rem;
+    color: var(--main-color);
+}
+.product-list li:hover a dl dt {
+    color: #fff;
+}
+.product-list dl dd {
+    font-weight: 400;
+    font-size: 2rem;
+    color: var(--text-color);
+}
+.product-list li:hover a dl dd {
+    color: #fff;
+}
+.product-list a::after {
+    content: "";
+    /* position: absolute; */
+    align-items: center;
+    display: block;
+    width: 4.6rem;
+    height: 4.6rem;
+    background: #ffd373 url(../img/Vector.png) no-repeat 50% /20%;
+    margin: 0 auto;
+    border-radius: 50%;
+    margin-top: 5.5rem;
+    margin-bottom: 2.5rem;
+}
+
+/* brandstory */
+.brandstory {
+    margin: 0 auto;
+    padding-bottom: 25rem;
+}
+
+.visual,
+.product-h,
+.contents-con {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    text-align: center; /* 텍스트 가운데 정렬 */
+    margin: 0 auto;
+}
+
+.brandstory h2,
+.story-h h2,
+.product-h h2,
+.contents-con h2 {
+    margin-top: 6.5rem;
+    font-weight: 700;
+    font-size: 4.4rem;
+    color: #000;
+}
+
+.story-h,
+.s-product-h {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.story-h > img,
+.s-product-h > img,
+.product-h > img,
+.contents-con > img {
+    width: 100%;
+    max-width: 275px;
+    height: auto;
+    margin-top: 1rem;
+}
+
+/* Common styling for product lists */
+.s-product-list,
+.product-list {
+    margin-top: 6rem;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 5rem 3.5rem;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.s-product-list li {
+    margin: 0 auto;
+    background: #ffffff;
+    border-radius: 3rem;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 10px 15px -3px, rgba(0, 0, 0, 0.05) 0px 4px 6px -2px;
+    padding-bottom: 4.5rem;
+}
+
+.s-product-list li figure img {
+    border-radius: 2.5rem;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.s-product-list dl dt {
+    font-weight: 700;
+    font-size: 2.4rem;
+    color: var(--main-color);
+}
+
+.s-product-list dl dd {
+    font-weight: 400;
+    font-size: 2rem;
+    color: var(--text-color);
+}
+.t-btn {
+    display: none;
+}
+/* product-info table */
+.product-info,
+.contents-table {
+    margin-top: 15rem;
+    text-align: center;
+    font-weight: 700;
+    font-size: 3.5rem;
+}
+
+table {
+    width: 100%;
+    margin-top: 5rem;
+    border-collapse: collapse;
+}
+
+thead th,
+tbody td {
+    padding: 1.5rem;
+    font-weight: 700;
+    font-size: 2rem;
+    text-align: center;
+    border: 1px solid #000;
+}
+
+/* pagination */
+.pagination {
+    list-style: none;
+    display: inline-block;
+    padding: 0;
+    margin-top: 20px;
+}
+
+.pagination a {
+    font-size: 2rem;
+    text-decoration: none;
+    padding: 5px 12px;
+    color: #000000;
+}
+
+/* Modal styles */
+.modal .num {
+    width: 30px;
+    height: 30px;
+    line-height: 30px;
+    border-radius: 100%;
+    cursor: pointer;
+}
+
+.arrow-left {
+    border-top: 10px solid transparent;
+    border-bottom: 10px solid transparent;
+    border-right: 10px solid rgb(62, 62, 121);
+}
+
+/* Responsive styling */
+@media (max-width: 1100px) {
+    .inner {
+        width: 90%;
+    }
+
+    .gnb {
+        display: none;
+    }
+    .slide {
+        width: 100%;
+        height: auto;
+        overflow: hidden;
+    }
+
+    .info ol li {
+        font-size: 1.5rem;
+    }
+    .product-list li {
+        width: 95%; /* 중복된 width 속성 중 하나만 남김 */
+        padding: 0;
+    }
+    .product-list li a {
+        display: flex;
+        align-items: center;
+    }
+    .product-list li figure {
+        width: 40.5%; /* 고정된 크기 대신 100%로 변경하여 유동적으로 맞춤 */
+        height: auto; /* 높이도 자동 조정 */
+    }
+    .product-list li figure img {
+        aspect-ratio: 1/1;
+    }
+    .product-list li dl {
+        padding: 0 10rem 0 3.5rem;
+    }
+    .product-list dl dd {
+        margin-top: 1.5rem;
+    }
+    .product-list a::after {
+        display: none;
+    }
+    .event-con figure {
+        width: 100%;
+    }
+    .event-con figure img {
+        aspect-ratio: 1/1;
+    }
+    .t-btn {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 10%;
+        height: 5%;
+        margin: 7rem auto 7rem;
+    }
+    .t-btn img {
+        width: 2rem;
+    }
+    .event-con,
+    .world-list {
+        flex-direction: column;
+        align-items: center;
+        gap: 1rem;
+        width: 100%;
+    }
+
+    .story-con {
+        gap: 4rem;
+    }
+
+    .story-text,
+    .b-story-text1,
+    .b-story-text2 {
+        padding: 0;
+    }
+    .btn-top {
+        display: none;
+    }
+
+    .bg-text {
+        width: 100%;
+        padding: 0;
+        margin: 0;
+        border-radius: 2rem;
+        position: relative;
+    }
+    .world-list li p {
+        margin-top: 2rem;
+    }
+}
+
+@media (max-width: 945px) {
+    .event-text {
+        margin-left: 13rem;
+    }
+}
+@media (max-width: 600px) {
+    .event-text {
+        width: 90%;
+        margin-left: 1rem;
+    }
+    .m-product h3 {
+        font-size: 2.5rem;
+    }
+    .event-text h4 {
+        font-size: 2rem;
+    }
+    .bg-text {
+        height: 75rem;
+    }
+    .info {
+        width: 100%;
+        flex-direction: column;
+    }
+    .product-list li figure {
+        width: 77.5%;
+    }
+    .product-list li figure img {
+        width: 100%;
+        height: 100%;
+        object-fit: contain;
+    }
+    .product-list dl dd {
+        font-size: 1.5rem;
+    }
+    .story-con {
+        flex-wrap: wrap;
+    }
+}

@@ -1,0 +1,220 @@
+@charset 'utf-8';
+@import url("https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css");
+/* 디자인 초기화 */
+* {
+    /* m0+p0+bxbb */
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+ul,
+ol,
+li {
+    list-style: none;
+}
+
+img {
+    vertical-align: top;
+
+    /* maxw : 아무리 커져도 니 크기까지만 커져라 */
+    max-width: 100%;
+}
+
+body {
+    font: 16px/1.6 "Pretendard", sans-serif;
+    word-break: keep-all; /* wbka : 어절단위 줄바꿈 */
+    color: #666;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+a:hover {
+    text-decoration: none;
+    color: #738924;
+}
+
+/* 마크업 디자인 시작 */
+.board {
+    /* w1078+m0-a+bg#ff5 */
+    width: 1078px;
+    margin: 0 auto;
+    /* background: #ff5; */
+}
+
+.board h1 {
+    display: none; /* dn */
+}
+
+.board-list {
+    /* background: #5f5; */
+
+    display: flex;
+    flex-wrap: wrap; /* fxww */
+    gap: 50px 29px;
+}
+.board-list li {
+    /* border: 1px solid #000; */
+
+    width: 340px;
+    height: 420px;
+
+    background: #fff;
+
+    position: relative; /* 직계자손, 절대배치의 기준점 */
+
+    transition: 0.4s;
+}
+
+.news-item {
+}
+.news-item em {
+    /* w47+h47+bg#f00 */
+    width: 47px;
+    height: 47px;
+    background: url(../images/ico-not.png) no-repeat 0 0;
+    display: block; /* posa 와 같이 사용하여도 무관 */
+
+    /* posa+t0+l0 */
+    position: absolute; /* = 블록화되었다고 생각하여 지정크기에 맞춰줌 */
+    top: 15px;
+    left: 20px;
+
+    /* 텍스트 날리기 */
+    /* color: transparent; */
+
+    /* ti-999 [color: transparent;] 방식보다 많이 사용됨 */
+    /* ti 사용시에 oh와 함께 사용할 것. */
+    text-indent: -999px;
+    overflow: hidden;
+
+    z-index: 1;
+}
+
+.news-item .category {
+    /* posa 블록화을 해줌 */
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    z-index: 1;
+
+    border: 1px solid #ffffff;
+    padding: 7px 21px;
+    color: #fff;
+    font-size: 13px;
+}
+
+.news-pic {
+    height: 240px;
+    background: #f00;
+
+    /* posr 직계 자손인 [.news-pic::after 의] 기준 */
+    position: relative;
+
+    overflow: hidden;
+    transition: 0.4s;
+}
+
+.news-pic img {
+    width: 100%;
+    height: 100%;
+    /* 이미지가  잘리더라도 공간을 차지해라 */
+    /* 공간에 채워지는게 목적(한 쪽이 채워지면 끝) */
+    object-fit: cover;
+    /* 이미지가 잘리지 않고 지정된 요소의 크기에 보이게 해라 공간이 남음 */
+    /* 포함이 목적이며 가로/세로 영역안에 포함 */
+    /* object-fit: contain; */
+    object-position: 50% 10%;
+
+    transition: 0.4s;
+}
+
+/* 이미지 투명도로 가림 */
+.news-pic::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: #000;
+    opacity: 0.6; /* op.6 : 배경색에 투명도 */
+
+    transition: 0.4s;
+}
+
+/* 마우스 호버 효과 */
+.board-list li:hover .news-pic {
+    border-radius: 30px;
+}
+
+.board-list li:hover .news-pic::after {
+    opacity: 0.1;
+}
+
+.board-list li:hover .news-pic img {
+    transform: scale(1.5);
+}
+.news-con {
+    margin: 20px 0 7px;
+}
+
+.news-con h2 {
+    /* fw600+fz20+c#222+lh1.4 */
+    font-weight: 600;
+    font-size: 20px;
+    color: #222;
+    line-height: 1.4;
+}
+.news-con p {
+    margin-top: 10px;
+    color: #999;
+
+    /* background: #ff5; */
+
+    /* 한줄말줄임표시 */
+    /* width: 90%;
+    white-space: nowrap; /* 너가 벽을 만나더라도 줄바꿈하지마 */
+    /* overflow: hidden; */
+    /* 넘어기는 문장은 숨겨라 */
+    /* text-overflow: ellipsis; 말꼬리표시 */
+
+    /* 여러줄표시 */
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 2; /* 원하는 줄수 */
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+.news-con time {
+    /* fw500+fz10+c#676767 */
+    font-weight: 500;
+    font-size: 12px;
+    color: #676767;
+
+    position: absolute;
+    bottom: 7px;
+    left: 0;
+}
+
+.more {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    width: 281px;
+    height: 48px;
+    background: #fff;
+    border: 1px solid #c7c8c7;
+    color: #676767;
+
+    margin: 65px auto 0;
+}
+
+.more::after {
+    content: "+";
+    /* color: red; */
+    gap: 5px;
+}
