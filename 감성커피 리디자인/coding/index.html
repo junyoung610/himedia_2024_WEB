@@ -4,80 +4,318 @@
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <title>감성커피</title>
-        <link rel="icon" href="favicon.ico" type="image/x-icon" />
+        <link rel="stylesheet" href="./css/reset.css" />
         <link rel="stylesheet" href="./css/common.css" />
+        <link rel="stylesheet" href="./css/main.css" />
     </head>
     <body>
-        <header>
+        <a href="#main" class="hidden">본문 바로가기</a>
+
+        <header id="header">
             <div class="inner">
-                <h1>감성커피</h1>
+                <nav>
+                    <h1 class="h-logo">
+                        <a href="#"><img src="./img/h_logo.png" alt="감성커피" /></a>
+                    </h1>
+                    <ul class="gnb">
+                        <li>
+                            <a href="#">브랜드</a>
+                            <ul class="sub-menu">
+                                <li><a href="#">감성커피는</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="#">메뉴</a>
+                            <ul class="sub-menu">
+                                <li><a href="#">추천메뉴</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="#">매장안내</a>
+                            <ul class="sub-menu">
+                                <li><a href="#">가까운 곳에 감성커피</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="#">공지사항</a>
+                            <ul class="sub-menu">
+                                <li><a href="#">이벤트</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="#">창업안내</a>
+                            <ul class="sub-menu">
+                                <li><a href="#">창업혜택</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                    <button class="btn-link">주문하기</button>
+                </nav>
             </div>
         </header>
 
-        <nav>
-            <ul class="inner">
-                <li><a href="#about">About</a></li>
-                <li><a href="#menu">Menu</a></li>
-                <li><a href="#reviews">Reviews</a></li>
-                <li><a href="#store">Store</a></li>
-            </ul>
-        </nav>
+        <main id="main">
+            <section class="slide">
+                <h3 class="sec-title hidden">감성커피의 이벤트</h3>
 
-        <section class="hero">
-            <div class="inner">
-                <h1>따뜻한 순간을 함께하는 감성커피</h1>
-                <p>우리의 커피는 특별한 순간을 만듭니다</p>
-                <button>메뉴 보기</button>
-            </div>
-        </section>
+                <figure><img src="./img/slide1.png" alt="slide1" /></figure>
+            </section>
 
-        <section id="about" class="section">
-            <div class="inner">
-                <h2>브랜드 이야기</h2>
-                <p>감성커피는 최고의 커피 경험을 제공합니다. 원두의 선택부터 추출까지 모든 과정에 정성을 다합니다.</p>
-            </div>
-        </section>
-
-        <section id="menu" class="section">
-            <div class="inner">
-                <h2>베스트 메뉴</h2>
-                <div class="menu-grid">
-                    <div class="menu-item">
-                        <img src="americano.jpg" alt="아메리카노" />
-                        <h3>아메리카노</h3>
-                        <p>진한 원두의 풍미가 느껴지는 최고의 커피.</p>
-                    </div>
-                    <div class="menu-item">
-                        <img src="latte.jpg" alt="카페라떼" />
-                        <h3>카페라떼</h3>
-                        <p>부드러운 우유와 커피의 조화.</p>
-                    </div>
-                    <div class="menu-item">
-                        <img src="handdrip.jpg" alt="핸드드립" />
-                        <h3>핸드드립</h3>
-                        <p>정성스럽게 내린 한 잔의 커피.</p>
+            <section class="info">
+                <div class="inner">
+                    <div class="info-warp">
+                        <figure><img src="./img/info-pic.png" alt="info-pic" /></figure>
+                        <div class="info-text">
+                            <h2>늘 설레는 새로운 감성</h2>
+                            <strong>단순한 커피 한 잔이 아닙니다.</strong>
+                            <p>
+                                입구를 들어서는 순간부터 커피를 마시고 나가는 순간까지 일련의 모든 과정에 특별한 감성을
+                                부여합니다.
+                            </p>
+                            <button class="btn-link btn-size">자세히보기</button>
+                        </div>
                     </div>
                 </div>
-            </div>
-        </section>
+            </section>
 
-        <section id="reviews" class="section">
-            <div class="inner">
-                <h2>고객 후기</h2>
-                <p>고객들이 감성커피에 대해 이야기합니다.</p>
-            </div>
-        </section>
+            <section class="best-menu">
+                <h3 class="sec-title">베스트 메뉴</h3>
+                <ul class="menu-list">
+                    <li>
+                        <figure>
+                            <img src="./img/menu-1.png" alt="" />
+                        </figure>
+                        <strong>아메리카노</strong>
+                        <p>진한 원두의 풍미가 느껴지는 최고의 커피.</p>
+                    </li>
+                    <li>
+                        <figure>
+                            <img src="./img/menu-2.png" alt="" />
+                        </figure>
+                        <strong>카페라떼</strong>
+                        <p>부드러움 속에 녹아드는 진한 풍미 카페 라떼</p>
+                    </li>
+                    <li>
+                        <figure>
+                            <img src="./img/menu-3.png" alt="" />
+                        </figure>
+                        <strong>망고펄 골드키위주스</strong>
+                        <p>달콤한 망고와 황금빛 키위의 황홀한 조화, 망고펄 골드키위주스</p>
+                    </li>
+                    <li>
+                        <figure>
+                            <img src="./img/menu-4.png" alt="" />
+                        </figure>
+                        <strong>딸기 컵빙수</strong>
+                        <p>싱그러운 딸기가 가득 한 컵에 담긴 달콤한 행복, 딸기 컵빙수</p>
+                    </li>
+                    <li>
+                        <figure>
+                            <img src="./img/menu-4.png" alt="" />
+                        </figure>
+                        <strong>두바이 초코라떼</strong>
+                        <p>진한 원두의 풍미가 느껴지는 최고의 커피.</p>
+                    </li>
+                </ul>
+            </section>
 
-        <section id="store" class="section">
-            <div class="inner">
-                <h2>온라인 스토어</h2>
-                <p>지금 주문하고 집에서 감성커피를 즐기세요.</p>
-            </div>
-        </section>
+            <section class="review">
+                <h3 class="sec-title">감성커피의 후기</h3>
+                <div class="inner">
+                    <ul class="review-list">
+                        <li>
+                            <figure><img src="./img/review-pic1.png" alt="" /></figure>
+                            <div class="review-warp">
+                                <div class="review-user">
+                                    <img src="./img/review-user1.png" alt="" />
+                                    <div class="user-info">
+                                        <strong class="neme">Wade Warren</strong>
+                                        <div class="horoscope"></div>
+                                    </div>
+                                </div>
+                                <p>
+                                    Lorem ipsum dolor, sit amet consectetur adipisicing elit. Animi provident,
+                                    voluptatem laboriosam. Asperiores, nisi. Sed inventore alias officiis!
+                                </p>
+                            </div>
+                        </li>
+                        <li>
+                            <figure><img src="./img/review-pic2.png" alt="" /></figure>
+                            <div class="review-warp">
+                                <div class="review-user">
+                                    <img src="./img/review-user2.png" alt="" />
+                                    <div class="user-info">
+                                        <strong class="neme">Wade Warren</strong>
+                                        <div class="horoscope"></div>
+                                    </div>
+                                </div>
+                                <p>
+                                    Lorem ipsum dolor, sit amet consectetur adipisicing elit. Animi provident,
+                                    voluptatem laboriosam. Asperiores, nisi. Sed inventore alias officiis!
+                                </p>
+                            </div>
+                        </li>
+                        <li>
+                            <figure><img src="./img/review-pic3.png" alt="" /></figure>
+                            <div class="review-warp">
+                                <div class="review-user">
+                                    <img src="./img/review-user3.png" alt="" />
+                                    <div class="user-info">
+                                        <strong class="neme">Wade Warren</strong>
+                                        <div class="horoscope"></div>
+                                    </div>
+                                </div>
+                                <p>
+                                    Lorem ipsum dolor, sit amet consectetur adipisicing elit. Animi provident,
+                                    voluptatem laboriosam. Asperiores, nisi. Sed inventore alias officiis!
+                                </p>
+                            </div>
+                        </li>
+                        <li>
+                            <figure><img src="./img/review-pic4.png" alt="" /></figure>
+                            <div class="review-warp">
+                                <div class="review-user">
+                                    <img src="./img/review-user4.png" alt="" />
+                                    <div class="user-info">
+                                        <strong class="neme">Wade Warren</strong>
+                                        <div class="horoscope"></div>
+                                    </div>
+                                </div>
+                                <p>
+                                    Lorem ipsum dolor, sit amet consectetur adipisicing elit. Animi provident,
+                                    voluptatem laboriosam. Asperiores, nisi. Sed inventore alias officiis!
+                                </p>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </section>
 
-        <footer class="footer">
+            <section class="event">
+                <h3 class="sec-title">감성커피의 이벤트</h3>
+                <div class="inner">
+                    <ul class="event-list">
+                        <li>
+                            <figure><img src="./img/event1.png" alt="event" /></figure>
+                            <h4>감성커피X초록매실 콜라보 리뉴얼 메뉴 출시!</h4>
+                            <p>November 09, 2022</p>
+                        </li>
+                        <li>
+                            <figure><img src="./img/event1.png" alt="event" /></figure>
+                            <h4>감성커피X초록매실 콜라보 리뉴얼 메뉴 출시!</h4>
+                            <p>November 09, 2022</p>
+                        </li>
+                        <li>
+                            <figure><img src="./img/event1.png" alt="event" /></figure>
+                            <h4>감성커피X초록매실 콜라보 리뉴얼 메뉴 출시!</h4>
+                            <p>November 09, 2022</p>
+                        </li>
+                    </ul>
+                </div>
+            </section>
+
+            <section class="location">
+                <h3 class="sec-title hidden">감성커피의 이벤트</h3>
+                <div class="location-warp">
+                    <div class="write">
+                        <strong>나와 가까운 감성커피 </strong>
+                        <div class="txt">
+                            <div class="write-txt">
+                                <label for="Store-name">매장명</label>
+                                <input type="text" id="Store-name" />
+                            </div>
+                            <div class="writ-txte">
+                                <label for="City">도 / 시</label>
+                                <input type="text" id="City" />
+                            </div>
+                            <div class="write-txt">
+                                <label for="Village">시 / 군구</label>
+                                <input type="text" id="Village" />
+                            </div>
+                        </div>
+                        <button class="btn-Search">검색하기</button>
+                    </div>
+                    <div class="map">
+                        <iframe
+                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d50603.23472032384!2d126.98255356795504!3d37.5620801612554!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x357ca3b6461ab97d%3A0xeaef7499ff0992af!2z6rCQ7ISx7Luk7ZS8IOuPmeq1reuMgOygkA!5e0!3m2!1sko!2skr!4v1728367557309!5m2!1sko!2skr"
+                            width="600"
+                            height="450"
+                            style="border: 0"
+                            allowfullscreen=""
+                            loading="lazy"
+                            referrerpolicy="no-referrer-when-downgrade"
+                        ></iframe>
+                    </div>
+                </div>
+            </section>
+
+            <!--  -->
+            <strong>맞춤형 창업 프로모션</strong>
+            <ol>
+                <li>창업지원 프로그램</li>
+                <li>창업지원 프로그램</li>
+                <li>창업지원 프로그램</li>
+            </ol>
+
+            <section class="Startups">
+                <h3 class="sec-title">감성커피의 이벤트</h3>
+                <div class="Startups-info"></div>
+                <div class="Startups-write">
+                    <strong>창업문의</strong>
+                    <div class="write">
+                        <input type="text" id="user-neme" />
+                        <label for="user-neme">이름</label>
+                    </div>
+                    <div class="write">
+                        <input type="text" id="user-tel" />
+                        <label for="user-tel">연락처</label>
+                    </div>
+                    <div class="write">
+                        <input type="text" id="user-Area" />
+                        <label for="user-Area">지역</label>
+                    </div>
+                    <div class="checkbox">
+                        <input id="Consent" name="interval" type="radio" value="Consent" />
+                        <label for="Consent">개인정보수집동의</label>
+                    </div>
+                    <button class="btn-Search">보내기</button>
+                </div>
+            </section>
+        </main>
+        <footer id="footer">
             <div class="inner">
-                <p>© 2024 감성커피 | 모든 권리 보유.</p>
+                <div class="f-con">
+                    <div class="f-logo">
+                        <a href="#"><img src="./img/f_logo.png" alt="" /></a>
+                    </div>
+                    <div class="sns">
+                        <a href=""><img src="./img/sns1.png" alt="SNS" /></a>
+                        <a href=""><img src="./img/sns2.png" alt="SNS" /></a>
+                        <a href=""><img src="./img/sns3.png" alt="SNS" /></a>
+                    </div>
+                </div>
+                <br />
+                <a href="#">개인정보처리방침</a>
+                <a href="#"> 이메일무단수집거부 </a>
+                <address>
+                    <dl>
+                        <dt></dt>
+                        <dd>(주)비브라더스감성커피</dd>
+
+                        <dt>Address</dt>
+                        <dd>본사 : 서울시송파구 중대로12길 9 (가락동122-4)</dd>
+
+                        <dt>Tel</dt>
+                        <dd>02-401-1966</dd>
+
+                        <dt>Fax</dt>
+                        <dd>02-6937-1192</dd>
+
+                        <dt>E-mail</dt>
+                        <dd>b_brothers@naver.com</dd>
+                    </dl>
+                    <p>© GAMSUNG COFFEE. All Rightd Reserved</p>
+                </address>
             </div>
         </footer>
     </body>
