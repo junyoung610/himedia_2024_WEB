@@ -7,6 +7,11 @@
         <link rel="stylesheet" href="./css/reset.css" />
         <link rel="stylesheet" href="./css/common.css" />
         <link rel="stylesheet" href="./css/main.css" />
+        <!--  -->
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+        <link rel="stylesheet" href="./css/slide-menu.css" />
+        <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+        <script src="./js/slide-menu-script.js" defer></script>
     </head>
     <body>
         <a href="#main" class="hidden">본문 바로가기</a>
@@ -56,7 +61,7 @@
 
         <main id="main">
             <section class="slide">
-                <h3 class="sec-title hidden">감성커피의 이벤트</h3>
+                <h3 class="sec-title hidden">감성커피</h3>
 
                 <figure><img src="./img/slide1.png" alt="slide1" /></figure>
             </section>
@@ -78,47 +83,90 @@
                 </div>
             </section>
 
-            <section class="best-menu">
+            <section class="menu-slider-wrap">
                 <h3 class="sec-title">베스트 메뉴</h3>
-                <ul class="menu-list">
-                    <li>
-                        <figure>
-                            <img src="./img/menu-1.png" alt="" />
-                        </figure>
-                        <strong>아메리카노</strong>
-                        <p>진한 원두의 풍미가 느껴지는 최고의 커피.</p>
-                    </li>
-                    <li>
-                        <figure>
-                            <img src="./img/menu-2.png" alt="" />
-                        </figure>
-                        <strong>카페라떼</strong>
-                        <p>부드러움 속에 녹아드는 진한 풍미 카페 라떼</p>
-                    </li>
-                    <li>
-                        <figure>
-                            <img src="./img/menu-3.png" alt="" />
-                        </figure>
-                        <strong>망고펄 골드키위주스</strong>
-                        <p>달콤한 망고와 황금빛 키위의 황홀한 조화, 망고펄 골드키위주스</p>
-                    </li>
-                    <li>
-                        <figure>
-                            <img src="./img/menu-4.png" alt="" />
-                        </figure>
-                        <strong>딸기 컵빙수</strong>
-                        <p>싱그러운 딸기가 가득 한 컵에 담긴 달콤한 행복, 딸기 컵빙수</p>
-                    </li>
-                    <li>
-                        <figure>
-                            <img src="./img/menu-4.png" alt="" />
-                        </figure>
-                        <strong>두바이 초코라떼</strong>
-                        <p>진한 원두의 풍미가 느껴지는 최고의 커피.</p>
-                    </li>
-                </ul>
-            </section>
 
+                <!-- 이전/다음 버튼 -->
+                <button type="button" class="btn-prev">이전</button>
+                <button type="button" class="btn-next">다음</button>
+                <div class="slide-menu-wrap">
+                    <div class="swiper menu-slider">
+                        <div class="swiper-wrapper">
+                            <div class="swiper-slide">
+                                <figure><img src="./img/menu-1.png" alt="메뉴 1" /></figure>
+                                <div class="menu-name">
+                                    <strong>아메리카노</strong>
+                                    <p>진한 원두의 풍미가 느껴지는 최고의 커피.</p>
+                                </div>
+                            </div>
+                            <div class="swiper-slide">
+                                <figure><img src="./img/menu-2.png" alt="메뉴 1" /></figure>
+                                <div class="menu-name">
+                                    <strong>카페라떼</strong>
+                                    <p>부드러움 속에 녹아드는 진한 풍미 카페 라떼</p>
+                                </div>
+                            </div>
+                            <div class="swiper-slide">
+                                <figure><img src="./img/menu-3.png" alt="메뉴 1" /></figure>
+                                <div class="menu-name">
+                                    <strong>망고펄 골드키위주스</strong>
+                                    <p>달콤한 망고와 황금빛 키위의 황홀한 조화, 망고펄 골드키위주스</p>
+                                </div>
+                            </div>
+                            <div class="swiper-slide">
+                                <figure><img src="./img/menu-4.png" alt="메뉴 1" /></figure>
+                                <div class="menu-name">
+                                    <strong>딸기 컵빙수</strong>
+                                    <p>싱그러운 딸기가 가득 한 컵에 담긴 달콤한 행복, 딸기 컵빙수</p>
+                                </div>
+                            </div>
+                            <div class="swiper-slide">
+                                <figure><img src="./img/menu-5.png" alt="메뉴 1" /></figure>
+                                <div class="menu-name">
+                                    <strong>두바이 초코라떼</strong>
+                                    <p>진한 원두의 풍미가 느껴지는 최고의 커피.</p>
+                                </div>
+                            </div>
+                            <div class="swiper-slide">
+                                <figure><img src="./img/menu-5.png" alt="메뉴 1" /></figure>
+                                <div class="menu-name">
+                                    <strong>두바이 초코라떼</strong>
+                                    <p>진한 원두의 풍미가 느껴지는 최고의 커피.</p>
+                                </div>
+                            </div>
+                            <div class="swiper-slide">
+                                <figure><img src="./img/menu-5.png" alt="메뉴 1" /></figure>
+                                <div class="menu-name">
+                                    <strong>두바이 초코라떼</strong>
+                                    <p>진한 원두의 풍미가 느껴지는 최고의 커피.</p>
+                                </div>
+                            </div>
+                            <div class="swiper-slide">
+                                <figure><img src="./img/menu-5.png" alt="메뉴 1" /></figure>
+                                <div class="menu-name">
+                                    <strong>두바이 초코라떼</strong>
+                                    <p>진한 원두의 풍미가 느껴지는 최고의 커피.</p>
+                                </div>
+                            </div>
+                            <div class="swiper-slide">
+                                <figure><img src="./img/menu-5.png" alt="메뉴 1" /></figure>
+                                <div class="menu-name">
+                                    <strong>두바이 초코라떼</strong>
+                                    <p>진한 원두의 풍미가 느껴지는 최고의 커피.</p>
+                                </div>
+                            </div>
+                            <div class="swiper-slide">
+                                <figure><img src="./img/menu-5.png" alt="메뉴 1" /></figure>
+                                <div class="menu-name">
+                                    <strong>두바이 초코라떼</strong>
+                                    <p>진한 원두의 풍미가 느껴지는 최고의 커피.</p>
+                                </div>
+                            </div>
+                            <!-- 추가 슬라이드 -->
+                        </div>
+                    </div>
+                </div>
+            </section>
             <section class="review">
                 <h3 class="sec-title">감성커피의 후기</h3>
                 <div class="inner">
@@ -218,13 +266,13 @@
                 <h3 class="sec-title hidden">감성커피의 이벤트</h3>
                 <div class="location-warp">
                     <div class="write">
-                        <strong>나와 가까운 감성커피 </strong>
+                        <strong>나와 가까운 감성커피</strong>
                         <div class="txt">
                             <div class="write-txt">
                                 <label for="Store-name">매장명</label>
                                 <input type="text" id="Store-name" />
                             </div>
-                            <div class="writ-txte">
+                            <div class="write-txt">
                                 <label for="City">도 / 시</label>
                                 <input type="text" id="City" />
                             </div>
@@ -238,9 +286,6 @@
                     <div class="map">
                         <iframe
                             src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d50603.23472032384!2d126.98255356795504!3d37.5620801612554!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x357ca3b6461ab97d%3A0xeaef7499ff0992af!2z6rCQ7ISx7Luk7ZS8IOuPmeq1reuMgOygkA!5e0!3m2!1sko!2skr!4v1728367557309!5m2!1sko!2skr"
-                            width="600"
-                            height="450"
-                            style="border: 0"
                             allowfullscreen=""
                             loading="lazy"
                             referrerpolicy="no-referrer-when-downgrade"
@@ -249,36 +294,52 @@
                 </div>
             </section>
 
-            <!--  -->
-            <strong>맞춤형 창업 프로모션</strong>
-            <ol>
-                <li>창업지원 프로그램</li>
-                <li>창업지원 프로그램</li>
-                <li>창업지원 프로그램</li>
-            </ol>
-
             <section class="Startups">
-                <h3 class="sec-title">감성커피의 이벤트</h3>
-                <div class="Startups-info"></div>
+                <h3 class="sec-title hidden">감성커피 창업문의</h3>
+                <div class="Startups-info">
+                    <strong>맞춤형 창업 프로모션</strong>
+                    <div class="star-flex">
+                        <div class="star-text">
+                            <div class="text">
+                                <p>1</p>
+                                <p>창업지원 프로그램</p>
+                            </div>
+                        </div>
+                        <div class="star-text">
+                            <div class="text">
+                                <p>2</p>
+                                <p>맞춤창업 계획제안</p>
+                            </div>
+                        </div>
+                        <div class="star-text">
+                            <div class="text">
+                                <p>3</p>
+                                <p>특별혜택 이벤트</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
                 <div class="Startups-write">
                     <strong>창업문의</strong>
-                    <div class="write">
-                        <input type="text" id="user-neme" />
-                        <label for="user-neme">이름</label>
-                    </div>
-                    <div class="write">
-                        <input type="text" id="user-tel" />
-                        <label for="user-tel">연락처</label>
-                    </div>
-                    <div class="write">
-                        <input type="text" id="user-Area" />
-                        <label for="user-Area">지역</label>
+                    <div class="txt">
+                        <div class="write-txt2">
+                            <label for="user-neme">이름</label>
+                            <input type="text" id="user-neme" />
+                        </div>
+                        <div class="write-txt2">
+                            <label for="user-tel">연락처</label>
+                            <input type="text" id="user-tel" />
+                        </div>
+                        <div class="write-txt2">
+                            <label for="user-Area">지역</label>
+                            <input type="text" id="user-Area" />
+                        </div>
                     </div>
                     <div class="checkbox">
-                        <input id="Consent" name="interval" type="radio" value="Consent" />
+                        <input id="Consent" name="interval" type="checkbox" value="Consent" />
                         <label for="Consent">개인정보수집동의</label>
+                        <button class="btn-Search btn-star">보내기</button>
                     </div>
-                    <button class="btn-Search">보내기</button>
                 </div>
             </section>
         </main>
@@ -289,33 +350,23 @@
                         <a href="#"><img src="./img/f_logo.png" alt="" /></a>
                     </div>
                     <div class="sns">
-                        <a href=""><img src="./img/sns1.png" alt="SNS" /></a>
                         <a href=""><img src="./img/sns2.png" alt="SNS" /></a>
+                        <a href=""><img src="./img/sns1.png" alt="SNS" /></a>
                         <a href=""><img src="./img/sns3.png" alt="SNS" /></a>
                     </div>
                 </div>
                 <br />
                 <a href="#">개인정보처리방침</a>
                 <a href="#"> 이메일무단수집거부 </a>
-                <address>
-                    <dl>
-                        <dt></dt>
-                        <dd>(주)비브라더스감성커피</dd>
 
-                        <dt>Address</dt>
-                        <dd>본사 : 서울시송파구 중대로12길 9 (가락동122-4)</dd>
-
-                        <dt>Tel</dt>
-                        <dd>02-401-1966</dd>
-
-                        <dt>Fax</dt>
-                        <dd>02-6937-1192</dd>
-
-                        <dt>E-mail</dt>
-                        <dd>b_brothers@naver.com</dd>
-                    </dl>
-                    <p>© GAMSUNG COFFEE. All Rightd Reserved</p>
-                </address>
+                <ul class="address">
+                    <li>(주)비브라더스감성커피</li>
+                    <li>서울시 송파구 중대로 12길 9 (가락동122-4)</li>
+                    <li>Tel 02-401-1966</li>
+                    <li>Fax 02-6937-1192</li>
+                    <li>E-mail b_brothers@naver.com</li>
+                </ul>
+                <p class="copy">&copy; GAMSUNG COFFEE. All Rightd Reserved</p>
             </div>
         </footer>
     </body>

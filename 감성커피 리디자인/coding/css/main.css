@@ -17,13 +17,14 @@
 }
 
 .info-text {
-    padding: 4rem;
+    padding: 7rem;
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
+    gap: 5.5rem;
 }
 
 .info-text h2 {
+    color: var(--main-color);
     font-weight: 700;
     font-size: 4.3rem;
 }
@@ -82,22 +83,24 @@
 }
 
 .review-warp {
-    padding: 2rem;
+    padding: 2.5rem;
 }
 
 .review-user {
-    width: 36rem;
+    width: 35rem;
+    height: 35%;
     display: flex;
     gap: 2rem;
 }
 
 .review-warp p {
+    padding-top: 2rem;
     width: 36rem;
 }
 
 .user-info strong {
     font-weight: 800;
-    font-size: 2.8rem;
+    font-size: 1.8rem;
 }
 
 .user-info strong::after {
@@ -131,7 +134,7 @@
 
 /* location */
 .location {
-    padding: 20rem;
+    padding-top: 20rem;
 }
 
 .location-warp {
@@ -139,7 +142,7 @@
 }
 
 .write {
-    width: 101rem;
+    width: 50%;
     background: var(--main-color);
     color: #fff;
     position: relative;
@@ -147,8 +150,8 @@
 
 .write strong {
     position: absolute;
-    margin-left: 10rem;
-    padding-top: 3rem;
+    top: 20%;
+    left: 25%;
     font-weight: 700;
     font-size: 4.8rem;
 }
@@ -156,21 +159,140 @@
 .write-txt {
     width: 60rem;
     display: flex;
+    border-bottom: 1px solid #fff;
 }
 
 .write label {
-    width: 6rem;
+    width: 10rem;
+    font-weight: 400;
+    font-size: 2.2rem;
 }
 .write input {
-    width: 50rem;
+    width: 100%;
+    background: none;
+    color: #fff;
     margin-left: 2rem;
 }
 
 .txt {
     position: absolute;
-    top: 15rem;
-    left: 10rem;
+    top: 40%;
+    left: 25%;
     display: flex;
     flex-direction: column;
-    gap: 3rem;
+    gap: 5rem;
+}
+
+.btn-Search {
+    position: absolute;
+    top: 80%;
+    left: 25%;
+    padding: 1rem;
+    width: 27.5rem;
+    background: #fff;
+    color: #000;
+    border-radius: 3px;
+}
+.map {
+    width: 50%;
+    height: 56rem;
+}
+.map iframe {
+    width: 100%;
+    height: 100%;
+}
+.Startups {
+    display: flex;
+    height: 70rem;
+}
+.Startups-info {
+    padding-bottom: 0;
+    width: 50%;
+    background: url(../img/star-bg.png) no-repeat;
+    color: #fff;
+    position: relative;
+}
+.star-flex {
+    display: flex;
+    gap: 35px;
+    position: absolute;
+    top: 50%;
+    left: 25%;
+}
+.Startups-info strong {
+    position: absolute;
+    top: 20%;
+    left: 25%;
+    font-weight: 700;
+    font-size: 4.8rem;
+}
+
+.star-text {
+    background: #fff;
+    border: 1px solid var(--main-color);
+    border-radius: 100px;
+    width: 200px;
+    height: 200px;
+}
+.star-text .text p {
+    text-align: center;
+}
+.star-text .text p:first-child {
+    font-weight: 700;
+    font-size: 4.8rem;
+    color: var(--main-color);
+}
+.star-text .text p + p {
+    color: #000;
+    font-weight: 600;
+    font-size: 3.5rem;
+}
+.Startups-write {
+    width: 50%;
+    background: var(--main-color);
+    color: #fff;
+    position: relative;
+}
+.Startups-write strong {
+    position: absolute;
+    top: 20%;
+    left: 25%;
+    font-weight: 700;
+    font-size: 4.8rem;
+}
+
+.write-txt2 {
+    width: 60rem;
+    display: flex;
+    border-bottom: 1px solid #fff;
+}
+.write-txt2 label {
+    width: 6rem;
+    font-weight: 400;
+    font-size: 2.2rem;
+}
+.write-txt2 input {
+    width: 100%;
+    margin-left: 2rem;
+    background: none;
+    color: #fff;
+}
+
+.checkbox {
+    position: absolute;
+    top: 80%;
+    left: 50%;
+
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    align-items: center;
+}
+
+.btn-star {
+    position: absolute;
+    border-radius: 20px;
+    width: 25.3rem;
+    top: 135%;
+    left: -40%;
 }

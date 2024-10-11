@@ -1,0 +1,71 @@
+@charset 'utf-8';
+
+/* 메뉴명 폰트 설정 */
+.menu-name strong {
+    font-weight: 700;
+    font-size: 2.4rem;
+}
+.menu-name p {
+    font-weight: 400;
+    font-size: 1.8rem;
+}
+
+.menu-slider-wrap {
+    margin: 0 auto;
+    position: relative;
+    overflow: hidden;
+}
+
+/* 메뉴 이미지 설정 */
+.swiper-slide figure {
+    width: 31.7rem;
+    height: 46rem;
+}
+.swiper-slide figure img {
+    width: 100%;
+    height: 100%;
+}
+
+.swiper {
+    width: 100%;
+}
+
+.swiper-slide {
+    width: 317px; /* 각 슬라이드의 가로 크기 설정 */
+    height: auto; /* 필요에 따라 슬라이드 높이 조절 */
+}
+
+.swiper-slide img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.swiper-wrapper {
+    display: flex;
+}
+
+.menu-name {
+    text-align: center;
+}
+
+.btn-prev,
+.btn-next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 10;
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+}
+
+.btn-prev {
+    left: 0;
+}
+
+.btn-next {
+    right: 0;
+}
