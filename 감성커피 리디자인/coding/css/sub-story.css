@@ -1,0 +1,77 @@
+/* story */
+
+.story-warp {
+    display: flex;
+    gap: 9rem;
+}
+.story-warp figure {
+    width: 64rem;
+    height: 64rem;
+}
+.story-warp figure img {
+    border-radius: 5rem;
+}
+.story-body {
+    display: flex;
+    flex-direction: column;
+    gap: 10rem;
+}
+.story-text {
+    width: 77.5rem;
+    padding: 10rem;
+    padding-left: 0;
+    padding-right: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 5.5rem;
+}
+.story-text h2 {
+    font-weight: 700;
+    font-size: 4.3rem;
+    color: var(--main-color);
+}
+.story-text strong {
+    font-weight: 600;
+    font-size: 2.9rem;
+    color: #333;
+}
+.story-text p {
+    font-weight: 400;
+    font-size: 2.5rem;
+    color: #555;
+}
+.story-info {
+    margin-bottom: 37rem;
+}
+.info-text {
+    text-align: center;
+}
+.info-logofont figure {
+    display: flex;
+    justify-content: center;
+}
+
+.sub-info-title h3 {
+    color: #000;
+    margin-top: 21.5rem;
+    text-align: center;
+    font-weight: 700;
+    font-size: 6rem;
+}
+.Brand-item {
+    margin-top: 10rem;
+    display: flex;
+    justify-content: space-between;
+}
+.story-item {
+    width: 64rem;
+}
+.story-item h4 {
+    border-bottom: 1px solid #000;
+    font-weight: 700;
+    font-size: 4rem;
+    color: #000;
+}
+.story-item figure {
+    margin-top: 5rem;
+}
