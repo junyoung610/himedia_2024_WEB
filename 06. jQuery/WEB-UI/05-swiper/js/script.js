@@ -18,7 +18,7 @@ const swiper = new Swiper(".swiper", {
             spaceBetween: 30, // 간격 30px
         },
         1200: {
-            slidesPerView: 5, // 보여질 슬라이드 갯수
+            slidesPerView: "auto", // 보여질 슬라이드 갯수
         },
     },
 
