@@ -11,9 +11,16 @@
 .story .sub-visual {
     background-image: url(../img/sub-img/sub_visual01.jpg);
 }
-.franchise .sub-visual {
-    background-image: url(../img/sun-visual2.jpg);
+.new-menu .sub-visual {
+    background-image: url(../img/sub-img/sub_visual02.jpg);
 }
+.coffee .sub-visual {
+    background-image: url(../img/sub-img/sub_visual03.jpg);
+}
+.shop .sub-visual {
+    background-image: url(../img/sub-img/sub_visual04.jpg);
+}
+
 .sub-visual .inner {
     height: 100%;
     display: flex;

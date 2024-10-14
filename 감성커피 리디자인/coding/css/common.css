@@ -80,26 +80,10 @@ hr,
     height: 5rem;
 }
 
-.gnb {
-    display: flex;
-}
-
-.gnb li a {
-    display: block;
-    padding: 1rem 4rem;
-    /* fw700+fz2r+c */
-    font-weight: 700;
-    font-size: 2.2rem;
-    color: var(--title-clor);
-    position: relative;
-}
-
-.sub-menu {
-    display: none;
-}
-
 .btn-link {
     width: 23.5rem;
+    height: 6.5rem;
+
     padding: 2rem;
     border-radius: 1.5rem;
     background: var(--main-color);
@@ -107,6 +91,10 @@ hr,
 
     font-weight: 600;
     font-size: 2.2rem;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 /* sec-title */

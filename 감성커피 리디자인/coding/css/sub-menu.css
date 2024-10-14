@@ -1,0 +1,40 @@
+.menu-title {
+    font-weight: 700;
+    font-size: 6rem;
+    color: #000;
+}
+.menu {
+    display: flex;
+    flex-wrap: wrap;
+}
+.menu li {
+    width: 44rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+
+    padding: 2rem;
+
+    transition: 0.4s;
+}
+
+.menu li:hover {
+    border: 1px solid var(--main-color);
+}
+
+.menu li strong {
+    font-weight: 700;
+    font-size: 3rem;
+    color: var(--main-color);
+}
+.menu li p {
+    font-weight: 700;
+    font-size: 2rem;
+    color: #333;
+}
+
+.new-menu-body2 {
+    margin-bottom: 31rem;
+}
