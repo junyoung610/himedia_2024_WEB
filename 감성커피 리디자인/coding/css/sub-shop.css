@@ -3,6 +3,7 @@
     padding: 2rem; /* 여백 추가 */
     margin-bottom: 2rem; /* 푸터와의 간격을 확보 */
     text-align: center;
+    color: #000;
 }
 
 .shop-title {
@@ -23,6 +24,9 @@
     color: #000;
     padding: 1rem;
     border-bottom: 1px solid #000; /* 아래쪽 테두리 */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
 
 .shop-txt2 label {
@@ -34,6 +38,7 @@
 .shop-txt2 input {
     width: 77%; /* 입력 필드가 전체 너비 차지 */
     margin-top: 5px;
+    padding: 2rem;
 }
 
 .btn-shop {

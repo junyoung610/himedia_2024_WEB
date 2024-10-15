@@ -1,0 +1,34 @@
+.event-body-wrap {
+    position: relative;
+    padding: 2rem; /* 여백 추가 */
+    margin-bottom: 2rem; /* 푸터와의 간격을 확보 */
+    color: #000;
+}
+
+.event-body-title {
+    text-align: left;
+    font-weight: 700;
+    font-size: 6rem;
+}
+
+.event-body-list {
+    margin-top: 5rem;
+    display: flex;
+    flex-direction: column;
+    gap: 5rem;
+}
+.event-body-list > figure {
+    align-self: center;
+}
+.event-body-txt {
+    font-weight: 600;
+    font-size: 2.5rem;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.btn-event {
+    margin-top: 5rem;
+    align-self: center;
+}

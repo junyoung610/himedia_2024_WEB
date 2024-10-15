@@ -1,0 +1,22 @@
+.bg-image {
+    background-image: url("https://cdn.pixabay.com/photo/2015/11/10/08/31/banner-1036483_1280.jpg");
+    background-size: cover;
+    background-position: center;
+}
+
+#hero {
+    min-height: 400px;
+    display: flex;
+    align-items: center;
+}
+
+.team-member img {
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
+}
+
+#map img {
+    width: 100%;
+    height: auto;
+}

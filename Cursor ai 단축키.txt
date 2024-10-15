@@ -1,0 +1,3 @@
+ctrl + L: 채팅창
+ctrl + k: 부분수정
+ctrl + enter : 수정일괄반영

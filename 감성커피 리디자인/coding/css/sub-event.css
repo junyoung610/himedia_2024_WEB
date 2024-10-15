@@ -1,0 +1,34 @@
+.event-body {
+    position: relative;
+    padding: 2rem; /* 여백 추가 */
+    margin-bottom: 2rem; /* 푸터와의 간격을 확보 */
+    color: #000;
+}
+
+.event-title {
+    text-align: left;
+    font-weight: 700;
+    font-size: 6rem;
+}
+
+.event-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8.5rem 1rem;
+}
+
+.event-list li {
+    width: 44rem;
+}
+
+.event-txt {
+    margin: 1.3rem;
+}
+.event-list li strong {
+    font-weight: 700;
+    font-size: 2.4rem;
+}
+.event-list li p {
+    font-weight: 400;
+    font-size: 2rem;
+}

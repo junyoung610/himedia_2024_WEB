@@ -1,0 +1,73 @@
+.procedure-body-wrap {
+    position: relative;
+    padding: 2rem; /* 여백 추가 */
+    margin-bottom: 2rem; /* 푸터와의 간격을 확보 */
+    color: #000;
+}
+
+.procedure-body-title {
+    text-align: left;
+    font-weight: 700;
+    font-size: 6rem;
+}
+
+.procedure-txt {
+    margin-top: 80px;
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+    font-weight: 600;
+}
+.procedure-txt strong {
+    font-size: 3.5rem;
+}
+.procedure-txt p {
+    font-size: 2.6rem;
+}
+.procedure-txt p b {
+    color: var(--main-color);
+}
+
+.txt {
+    /* background: #ff5; */
+    margin-top: 8rem;
+    display: flex;
+    gap: 6rem 1rem;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    font-weight: 600;
+    font-size: 2.2rem;
+}
+
+.write-txt {
+    display: flex;
+    gap: 2rem;
+}
+
+.write-txt input {
+    border-bottom: 1px solid #000;
+}
+
+.write-txt label b {
+    color: var(--main-color);
+}
+
+#user-Counseling {
+    width: 120rem;
+}
+
+.btn {
+    display: flex;
+    justify-content: center;
+}
+
+.btn-counseling {
+    width: 12.5rem;
+    font-size: 1.9rem;
+    margin-top: 10rem;
+    border-radius: 1.5rem;
+    padding: 2rem;
+    background: var(--main-color);
+    color: #fff;
+}

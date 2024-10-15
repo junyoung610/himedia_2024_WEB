@@ -1,0 +1,91 @@
+.startups-body-wrap {
+    position: relative;
+    padding: 2rem; /* 여백 추가 */
+    margin-bottom: 2rem; /* 푸터와의 간격을 확보 */
+    color: #000;
+}
+
+.startups-body-title {
+    text-align: left;
+    font-weight: 700;
+    font-size: 6rem;
+}
+.start-benefit {
+    margin-top: 9rem;
+}
+.start-benefit h4 {
+    width: 18.5rem;
+    padding: 1rem;
+    background: var(--main-color);
+    color: #fff;
+    text-align: center;
+    font-weight: 600;
+    font-size: 3rem;
+    border-radius: 1.5rem;
+    margin-bottom: 3rem;
+}
+
+.benefit {
+    display: flex;
+}
+
+.benefit-txt {
+    width: 81rem;
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+}
+
+.benefit-txt strong {
+    font-weight: 600;
+    font-size: 4rem;
+    color: var(--main-color);
+}
+
+.benefit-txt h5 {
+    font-weight: 700;
+    font-size: 6rem;
+}
+
+.benefit-txt p {
+    font-weight: 500;
+    font-size: 3rem;
+}
+.benefit-txt p b {
+    font-weight: 700;
+    color: var(--main-color);
+}
+
+.benefit figure {
+    width: 55rem;
+}
+
+.start-top {
+    margin-top: 16.5rem;
+}
+
+.procedure {
+    margin-top: 24.5rem;
+    display: flex;
+    gap: 5.5rem;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.procedure h6 {
+    font-weight: 700;
+    font-size: 6rem;
+    text-align: center;
+}
+
+.btn-startup {
+    width: 20.5rem;
+    padding: 1.5rem;
+    background: var(--main-color);
+    color: #fff;
+    border-radius: 1.5rem;
+    margin-top: 5rem;
+    font-weight: 600;
+    font-size: 4rem;
+}

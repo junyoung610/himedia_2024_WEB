@@ -18,7 +18,16 @@
     background-image: url(../img/sub-img/sub_visual03.jpg);
 }
 .shop .sub-visual {
-    background-image: url(../img/sub-img/sub_visual04.jpg);
+    background-image: url(../img/sub-img/sub_visual07.png);
+}
+.event .sub-visual {
+    background-image: url(../img/sub-img/sub_visual05.jpg);
+}
+.startups .sub-visual {
+    background-image: url(../img/sub-img/sub_visual06.png);
+}
+.procedure .sub-visual {
+    background-image: url(../img/sub-img/sub_visual06.png);
 }
 
 .sub-visual .inner {
