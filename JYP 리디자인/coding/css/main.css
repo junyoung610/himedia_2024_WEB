@@ -1,0 +1,67 @@
+@charset "UTF-8";
+
+.Goal {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    gap: 2.5rem;
+}
+.Goal strong {
+    font-size: 1.8rem;
+    font-weight: 400;
+}
+.Goal p {
+    margin-top: 3rem;
+    font-size: 2.2rem;
+    font-weight: 400;
+}
+
+.album-wrap {
+    margin-top: 10rem;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 2.5rem;
+}
+.album-wrap img {
+    width: 43rem;
+}
+
+.album-btn {
+    display: flex;
+    justify-content: center;
+    margin-top: 8rem;
+}
+.album-btn button {
+    width: 15.1rem;
+    height: 4.5rem;
+    border-radius: 10px;
+    background: var(--main-color);
+    color: #fff;
+}
+
+/* NOTICE */
+
+.notice-info {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #d9d9d9;
+    height: 10rem;
+}
+
+.notice-title {
+    font-weight: 600;
+    font-size: 2rem;
+}
+.notice-list li a {
+    width: 125.1rem;
+    display: flex;
+    justify-content: space-between;
+}
+.news {
+    display: flex;
+    gap: 2.5rem;
+    justify-content: center;
+    align-items: center;
+}

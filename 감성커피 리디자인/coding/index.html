@@ -9,12 +9,17 @@
         <link rel="stylesheet" href="./css/common.css" />
         <link rel="stylesheet" href="./css/main.css" />
         <link rel="stylesheet" href="./css/nav.css" />
+        <link rel="stylesheet" href="./css/main-slider.css" />
         <!--  -->
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
         <link rel="stylesheet" href="./css/slide-menu.css" />
+
         <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+        <!-- <script src="./js/slide-main-script.js"></script> -->
         <script src="./js/slide-menu-script.js" defer></script>
         <script src="./js/nav-script.js"></script>
+        <!--  -->
+        <script src="./js/main-slide.js"></script>
     </head>
     <body>
         <a href="#main" class="hidden">본문 바로가기</a>
@@ -69,11 +74,26 @@
         </header>
 
         <main id="main">
-            <section class="slide">
-                <h3 class="sec-title hidden">감성커피</h3>
-
-                <figure><img src="./img/slide1.png" alt="slide1" /></figure>
-            </section>
+            <article id="slider">
+                <div class="sliderWrap">
+                    <div class="slider s1">
+                        <img src="./img/slide1.png" alt="이미지 설명" />
+                        <span class="hidden">이미지1</span>
+                    </div>
+                    <div class="slider s2">
+                        <img src="./img/slide2.png" alt="이미지 설명" />
+                        <span class="hidden">이미지2</span>
+                    </div>
+                    <div class="slider s3">
+                        <img src="./img/slide3.png" alt="이미지 설명" />
+                        <span class="hidden">이미지3</span>
+                    </div>
+                    <div class="slider s4">
+                        <img src="./img/slide4.png" alt="이미지 설명" />
+                        <span class="hidden">이미지3</span>
+                    </div>
+                </div>
+            </article>
 
             <section class="info">
                 <div class="inner">

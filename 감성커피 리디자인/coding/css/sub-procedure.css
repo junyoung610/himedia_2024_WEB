@@ -1,14 +1,19 @@
 .procedure-body-wrap {
     position: relative;
-    padding: 2rem; /* 여백 추가 */
-    margin-bottom: 2rem; /* 푸터와의 간격을 확보 */
+    padding: 2rem; /* 여백 */
+    margin-bottom: 2rem; /* 푸터와의 간격 */
     color: #000;
+    max-width: 120rem; /* 최대 너비 설정 */
+    margin-left: auto;
+    margin-right: auto; /* 중앙 정렬 */
 }
 
 .procedure-body-title {
     text-align: left;
     font-weight: 700;
     font-size: 6rem;
+    line-height: 1.2; /* 타이틀 줄 간격 조정 */
+    margin-bottom: 2rem;
 }
 
 .procedure-txt {
@@ -17,23 +22,26 @@
     align-items: center;
     gap: 1.5rem;
     font-weight: 600;
+    flex-wrap: wrap; /* 화면이 작을 때 줄바꿈 */
 }
+
 .procedure-txt strong {
     font-size: 3.5rem;
 }
+
 .procedure-txt p {
     font-size: 2.6rem;
 }
+
 .procedure-txt p b {
     color: var(--main-color);
 }
 
 .txt {
-    /* background: #ff5; */
     margin-top: 8rem;
     display: flex;
     gap: 6rem 1rem;
-    flex-wrap: wrap;
+    flex-wrap: wrap; /* 화면이 작을 때 줄바꿈 */
     justify-content: space-between;
     align-items: center;
     font-weight: 600;
@@ -43,10 +51,20 @@
 .write-txt {
     display: flex;
     gap: 2rem;
+    flex-wrap: wrap; /* 반응형을 위해 줄바꿈 허용 */
+    justify-content: space-between;
 }
 
 .write-txt input {
     border-bottom: 1px solid #000;
+    flex: 1; /* input이 적절히 공간을 차지하도록 */
+}
+
+.write-txt label {
+    flex: 1; /* label이 적절히 공간을 차지하도록 */
+}
+.flex-none {
+    flex: 0.2; /* label이 적절히 공간을 차지하도록 */
 }
 
 .write-txt label b {
@@ -54,7 +72,12 @@
 }
 
 #user-Counseling {
-    width: 120rem;
+    width: 100%; /* 전체 너비 100% */
+    max-width: 120rem; /* 최대 너비 제한 */
+    height: 10rem; /* 높이를 10rem으로 설정 */
+    display: flex;
+    align-items: center; /* 수직 중앙 정렬 */
+    gap: 2rem; /* 라벨과 인풋 간 간격 */
 }
 
 .btn {
@@ -70,4 +93,30 @@
     padding: 2rem;
     background: var(--main-color);
     color: #fff;
+    text-align: center;
+}
+
+/* 반응형 추가 */
+@media (max-width: 1024px) {
+    .procedure-body-title {
+        font-size: 4rem; /* 타이틀 크기 조정 */
+    }
+
+    .procedure-txt strong {
+        font-size: 2.5rem; /* 텍스트 크기 조정 */
+    }
+
+    .procedure-txt p {
+        font-size: 2rem; /* 텍스트 크기 조정 */
+    }
+
+    .txt {
+        font-size: 1.8rem; /* 텍스트 크기 조정 */
+        gap: 4rem 1rem; /* 간격 조정 */
+    }
+
+    .btn-counseling {
+        width: 100%; /* 버튼 너비 조정 */
+        font-size: 1.8rem;
+    }
 }

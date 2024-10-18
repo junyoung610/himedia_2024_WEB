@@ -69,3 +69,12 @@
 .btn-next {
     right: 0;
 }
+@media (max-width: 1200px) {
+    .menu-slider-wrap {
+        margin-top: 20rem;
+    }
+    .btn-prev,
+    .btn-next {
+        display: none;
+    }
+}
