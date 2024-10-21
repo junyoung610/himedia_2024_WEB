@@ -1,0 +1,15 @@
+@charset 'utf-8';
+
+.contain {
+    display: flex;
+    gap: 25px;
+}
+
+.artlst {
+    width: 100%;
+    columns: 330px;
+}
+
+.artlst figure {
+    margin-bottom: 3.6rem;
+}

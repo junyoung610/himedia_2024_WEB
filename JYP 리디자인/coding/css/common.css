@@ -56,41 +56,44 @@ section {
     /* background: rgba(255, 255, 0, 0.3); */
 }
 
-/* gnb-wrap */
-.gnb-wrap {
-    margin-top: 1rem;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
-
-.h-logo {
-    width: 151px;
-    height: auto;
-}
-
-.gnb {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 4.8rem;
-}
-
-.sub-menu {
-    display: none;
-}
-
-main > section:nth-child(1) {
-    margin-top: 2rem;
-    padding: 0;
-}
-
 /* set-title */
 .set-title {
     font-size: 4.8rem;
     font-weight: 700;
     text-align: center;
     color: var(--main-color);
+}
+
+/* sub-공통디자인 */
+.sub-set-title {
+    font-weight: 600;
+    font-size: 4.8rem;
+}
+
+/* NOTICE */
+
+.notice-info {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #d9d9d9;
+    height: 10rem;
+}
+
+.notice-title {
+    font-weight: 600;
+    font-size: 2rem;
+}
+.notice-list li a {
+    width: 125.1rem;
+    display: flex;
+    justify-content: space-between;
+}
+.news {
+    display: flex;
+    gap: 2.5rem;
+    justify-content: center;
+    align-items: center;
 }
 
 /* footer */

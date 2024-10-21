@@ -7,6 +7,7 @@
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
         <link rel="stylesheet" href="./css/reset.css" />
         <link rel="stylesheet" href="./css/common.css" />
+        <link rel="stylesheet" href="./css/gnb.css" />
         <link rel="stylesheet" href="./css/main-visual.css" />
         <link rel="stylesheet" href="./css/main.css" />
 
@@ -18,54 +19,56 @@
 
         <header id="header">
             <div class="inner">
-                <nav class="gnb-wrap">
+                <div class="gnb-wrap">
                     <h1 class="h-logo">
-                        <a href="./index.html"><img src="./img/common/logo.png" alt="JYP Entertainment" /></a>
+                        <a href="#"><img src="./img/common/logo.png" alt="Logo" /></a>
                     </h1>
-                    <ul class="gnb">
-                        <li>
-                            <a href="#">JYP</a>
-                            <ul class="sub-menu">
-                                <li><a href="./jyp/about.html">ABOUT JYP</a></li>
-                                <li><a href="./jyp/history.html">HISTORY</a></li>
-                                <li><a href="./jyp/notice.html">NOTICE</a></li>
-                                <li><a href="./jyp/contact.html">CONTACT</a></li>
-                            </ul>
-                        </li>
-                        <li>
-                            <a href="#">ARTIST</a>
-                            <ul class="sub-menu">
-                                <li><a href="./artist/artist.html">ARTIST</a></li>
-                                <li><a href="./artist/album.html">ALBUM</a></li>
-                                <li><a href="./artist/video.html">VIDEO</a></li>
-                            </ul>
-                        </li>
-                        <li>
-                            <a href="#">SUSTAINABILITY</a>
-                            <ul class="sub-menu">
-                                <li><a href="./sustainability/esg-strategy.html">ESG STRATEGY</a></li>
-                                <li><a href="./sustainability/esg-factbook.html">ESG FACTBOOK</a></li>
-                                <li><a href="./sustainability/esg-reporting.html">ESG REPORTING</a></li>
-                            </ul>
-                        </li>
-                        <li>
-                            <a href="#">IR</a>
-                            <ul class="sub-menu">
-                                <li><a href="./ir/stock-info.html">STOCK INFO</a></li>
-                                <li><a href="./ir/financial-info.html">FINANCIAL INFO</a></li>
-                                <li><a href="./ir/public-disclosure-info.html">PUBLIC DISCLOSURE INFO</a></li>
-                                <li><a href="./ir/data-materials.html">DATA & MATERIALS</a></li>
-                                <li><a href="./ir/news.html">NEWS</a></li>
-                                <li><a href="./ir/ir-inquiry.html">IR INQUIRY</a></li>
-                            </ul>
-                        </li>
-                    </ul>
-                </nav>
+                    <nav class="gnb">
+                        <ul>
+                            <li>
+                                <a href="#">JYP</a>
+                                <ul class="sub_gnb">
+                                    <li><a href="./sub-about.html">ABOUT JYP</a></li>
+                                    <li><a href="./sub-history.html">HISTORY</a></li>
+                                    <li><a href="./sub-notice.html">NOTICE</a></li>
+                                    <li><a href="./sub-contact.html">CONTACT</a></li>
+                                </ul>
+                            </li>
+                            <li>
+                                <a href="#">ARTIST</a>
+                                <ul class="sub_gnb">
+                                    <li><a href="./sub-artist.html">ARTIST</a></li>
+                                    <li><a href="./sub-album.html">ALBUM</a></li>
+                                    <li><a href="./sub-video.html">VIDEO</a></li>
+                                </ul>
+                            </li>
+                            <li>
+                                <a href="#">ESG</a>
+                                <ul class="sub_gnb">
+                                    <li><a href="./sub-esg-strategy.html">ESG STRATEGY</a></li>
+                                    <li><a href="./sub-esg-factbook.html">ESG FACTBOOK</a></li>
+                                    <li><a href="./sub-esg-reporting.html">ESG REPORTING</a></li>
+                                </ul>
+                            </li>
+                            <li>
+                                <a href="#">IR</a>
+                                <ul class="sub_gnb">
+                                    <li><a href="./sub-stock-info.html">STOCK INFO</a></li>
+                                    <li><a href="./sub-financial-info.html">FINANCIAL INFO</a></li>
+                                    <li><a href="./sub-public-disclosure-info.html">PUBLIC DISCLOSURE INFO</a></li>
+                                    <li><a href="./sub-data-materials.html">DATA & MATERIALS</a></li>
+                                    <li><a href="./sub-news.html">NEWS</a></li>
+                                    <li><a href="./sub-ir-inquiry.html">IR INQUIRY</a></li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </nav>
+                </div>
             </div>
         </header>
 
         <main id="main">
-            <section class="main-visual">
+            <section class="main-visual" style="padding: 0">
                 <div class="swiper mySwiper">
                     <div class="swiper-wrapper">
                         <div class="swiper-slide visual-slide">
@@ -92,6 +95,24 @@
                             </figure>
                             <div class="visual-txt">
                                 <strong>Niziu</strong>
+                                <p>내용작성중입니다.</p>
+                            </div>
+                        </div>
+                        <div class="swiper-slide visual-slide">
+                            <figure>
+                                <img src="./img/visual/visual04.jpg" alt="JYP Entertainment" />
+                            </figure>
+                            <div class="visual-txt">
+                                <strong>2PM</strong>
+                                <p>내용작성중입니다.</p>
+                            </div>
+                        </div>
+                        <div class="swiper-slide visual-slide">
+                            <figure>
+                                <img src="./img/visual/visual05.jpg" alt="JYP Entertainment" />
+                            </figure>
+                            <div class="visual-txt">
+                                <strong>YAOCHEN</strong>
                                 <p>내용작성중입니다.</p>
                             </div>
                         </div>
@@ -230,21 +251,87 @@
                     <div class="album-wrap">
                         <div class="album-pic">
                             <figure><img src="./img/ALBUM/ALBUM-01.png" alt="ALBUM" /></figure>
+                            <div class="hover-album">
+                                <div class="hover-txt">
+                                    <strong>ITZY</strong>
+                                    <h4>GOLD</h4>
+                                    <p>2024-10-15</p>
+                                </div>
+                                <div class="hover-btn">
+                                    <a href=""><button class="more-btn">엘범정보 더보기</button></a>
+                                    <a href=""><button class="more-btn btn-2">엘범듣기</button></a>
+                                </div>
+                            </div>
                         </div>
                         <div class="album-pic">
                             <figure><img src="./img/ALBUM/ALBUM-02.png" alt="ALBUM" /></figure>
+                            <div class="hover-album">
+                                <div class="hover-txt">
+                                    <strong>Xdinary Heroes</strong>
+                                    <h4>LIVE and FALL</h4>
+                                    <p>2024-10-14</p>
+                                </div>
+                                <div class="hover-btn">
+                                    <a href=""><button class="more-btn">엘범정보 더보기</button></a>
+                                    <a href=""><button class="more-btn btn-2">엘범듣기</button></a>
+                                </div>
+                            </div>
                         </div>
                         <div class="album-pic">
                             <figure><img src="./img/ALBUM/ALBUM-03.png" alt="ALBUM" /></figure>
+                            <div class="hover-album">
+                                <div class="hover-txt">
+                                    <strong>Stray Kids</strong>
+                                    <h4>NIGHT -Korean ver.-</h4>
+                                    <p>2024-10-07</p>
+                                </div>
+                                <div class="hover-btn">
+                                    <a href=""><button class="more-btn">엘범정보 더보기</button></a>
+                                    <a href=""><button class="more-btn btn-2">엘범듣기</button></a>
+                                </div>
+                            </div>
                         </div>
                         <div class="album-pic">
                             <figure><img src="./img/ALBUM/ALBUM-04.png" alt="ALBUM" /></figure>
-                        </div>
-                        <div class="album-pic">
-                            <figure><img src="./img/ALBUM/ALBUM-05.png" alt="ALBUM" /></figure>
+                            <div class="hover-album">
+                                <div class="hover-txt">
+                                    <strong>Stray Kids</strong>
+                                    <h4>NIGHT</h4>
+                                    <p>2024-10-07</p>
+                                </div>
+                                <div class="hover-btn">
+                                    <a href=""><button class="more-btn">엘범정보 더보기</button></a>
+                                    <a href=""><button class="more-btn btn-2">엘범듣기</button></a>
+                                </div>
+                            </div>
                         </div>
                         <div class="album-pic">
                             <figure><img src="./img/ALBUM/ALBUM-06.png" alt="ALBUM" /></figure>
+                            <div class="hover-album">
+                                <div class="hover-txt">
+                                    <strong>NEXZ</strong>
+                                    <h4>Keep on Moving (Korean Ver.)</h4>
+                                    <p>2024-09-23</p>
+                                </div>
+                                <div class="hover-btn">
+                                    <a href=""><button class="more-btn">엘범정보 더보기</button></a>
+                                    <a href=""><button class="more-btn btn-2">엘범듣기</button></a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="album-pic">
+                            <figure><img src="./img/ALBUM/ALBUM-05.png" alt="ALBUM" /></figure>
+                            <div class="hover-album">
+                                <div class="hover-txt">
+                                    <strong>Xdinary Heroes</strong>
+                                    <h4>Open ♭eta v6.4</h4>
+                                    <p>2024-09-05</p>
+                                </div>
+                                <div class="hover-btn">
+                                    <a href=""><button class="more-btn">엘범정보 더보기</button></a>
+                                    <a href=""><button class="more-btn btn-2">엘범듣기</button></a>
+                                </div>
+                            </div>
                         </div>
                     </div>
                     <div class="album-btn">

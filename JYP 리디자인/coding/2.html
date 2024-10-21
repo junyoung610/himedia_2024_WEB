@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <style>
+            .container {
+                position: relative;
+                width: 200px;
+                height: 200px;
+                background-color: #ccc;
+                margin: 50px;
+                text-align: center;
+                line-height: 200px;
+            }
+
+            .hidden-content {
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                background-color: rgba(0, 0, 0, 0.8);
+                color: #fff;
+                opacity: 0;
+                visibility: hidden;
+                transition: opacity 0.3s ease, visibility 0.3s ease;
+                line-height: 200px; /* 수직 중앙 정렬 */
+            }
+
+            .container:hover .hidden-content {
+                opacity: 1;
+                visibility: visible;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="container">
+            Hover over me
+            <div class="hidden-content">Hello!</div>
+        </div>
+    </body>
+</html>
