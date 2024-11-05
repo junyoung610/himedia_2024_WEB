@@ -1,0 +1,236 @@
+@charset 'utf-8';
+
+.header-wrap {
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+    align-items: center;
+    width: 100%;
+}
+
+/* user-info */
+
+.user-info {
+    background: #f00;
+    text-align: right;
+}
+.login,
+.join {
+    padding: 5px;
+    background: none;
+}
+.logo {
+    width: 30rem;
+    height: 10rem;
+    background: #000;
+}
+
+/* 메뉴 전체 컨테이너 */
+.menu-wrap {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 10px 0;
+}
+
+.menu-wrap i {
+    display: none;
+}
+
+/* 메인 메뉴 스타일 */
+.gnb > ul {
+    display: flex;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    align-items: center;
+}
+
+.gnb > ul > li {
+    width: 140px;
+    text-align: center;
+    position: relative; /* 서브메뉴 정렬 기준점 */
+}
+
+.gnb > ul > li > a {
+    display: block;
+    padding: 15px 0;
+    font-weight: bold;
+    text-decoration: none;
+    color: #333;
+}
+
+/* 서브메뉴 배경 */
+.header-wrap::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 100%;
+    width: 100%;
+    height: 0;
+    background: white;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    transition: height 0.3s ease;
+    z-index: 1;
+}
+
+/* 호버 시 배경 높이 */
+.header-wrap:hover::after {
+    height: 190px;
+}
+
+/* 서브메뉴 컨테이너 */
+.sub-gnb {
+    position: absolute;
+    top: 100%;
+    left: 0; /* 부모 메뉴 기준으로 정렬 */
+    visibility: hidden;
+    opacity: 0;
+    width: 140px; /* 메인 메뉴와 동일한 너비 */
+    padding: 25px 0;
+    z-index: 2;
+    transition: all 0.3s ease;
+    text-align: center;
+    /* background: white; */
+}
+
+/* 헤더 호버 시 모든 서브메뉴 표시 */
+.header-wrap:hover .sub-gnb {
+    visibility: visible;
+    opacity: 1;
+}
+
+/* 서브메뉴 아이템 */
+.sub-gnb li {
+    list-style: none;
+    margin: 0;
+    padding: 8px 0;
+}
+
+.sub-gnb li a {
+    display: block;
+    text-decoration: none;
+    color: #333;
+    font-size: 16px;
+}
+
+.sub-gnb li:hover a {
+    color: #007bff;
+}
+
+.user-info-M,
+.menu-wrap > a,
+.menu {
+    display: none;
+}
+
+/* 반응형 스타일 */
+@media (max-width: 1024px) {
+    .inner {
+        width: 100%;
+    }
+
+    .user-info,
+    .gnb > ul > li > a {
+        display: none;
+    }
+
+    .menu-wrap > a {
+        pointer-events: none;
+    }
+    .menu-wrap > a,
+    .menu,
+    .menu-wrap i {
+        display: block;
+
+        font-weight: 600;
+        font-size: 1.6rem;
+    }
+
+    .menu {
+        display: block;
+        position: relative;
+        z-index: 100;
+    }
+
+    .menu button {
+        border: none;
+        background: none;
+        padding: 10px;
+        cursor: pointer;
+
+        font-size: 2.2rem;
+    }
+
+    .user-info-M.active {
+        display: block;
+        z-index: 100;
+    }
+    .gnb.active > .user-info-M {
+        display: block;
+    }
+
+    .gnb {
+        display: none;
+        position: fixed;
+        top: 0;
+        right: -100%;
+        width: 50%;
+        height: 100vh;
+        background: white;
+        box-shadow: -2px 0 5px rgba(0, 0, 0, 0.1);
+        transition: right 0.3s ease;
+        z-index: 99;
+    }
+
+    .gnb.active {
+        display: block;
+        right: 0;
+    }
+
+    .gnb > ul {
+        flex-direction: column;
+        padding: 130px 20px 20px;
+        position: relative;
+    }
+
+    .gnb > ul > li {
+        padding: 10px;
+        width: 100%;
+        text-align: left;
+    }
+
+    .sub-gnb {
+        position: static;
+        width: 100%;
+        padding: 0;
+        visibility: visible;
+        opacity: 1;
+        display: none;
+    }
+
+    .gnb > ul > li:hover .sub-gnb {
+        display: block;
+    }
+
+    .sub-gnb li {
+        padding: 15px 20px;
+    }
+
+    .header-wrap::after {
+        display: none;
+    }
+    .sub-gnb li a {
+        text-align: left;
+    }
+
+    .Mobile-nav {
+        display: block;
+        position: absolute;
+        right: 0;
+        display: flex;
+        gap: 10px;
+        flex-direction: column;
+        align-items: flex-end;
+    }
+}

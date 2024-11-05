@@ -1,0 +1,18 @@
+@charset 'utf-8';
+
+#footer {
+    background: #444;
+}
+
+.f-info {
+    padding: 3.5rem;
+    display: flex;
+    justify-content: space-between;
+}
+
+@media (max-width: 1024px) {
+    .f-info {
+        flex-direction: column;
+        gap: 20px;
+    }
+}

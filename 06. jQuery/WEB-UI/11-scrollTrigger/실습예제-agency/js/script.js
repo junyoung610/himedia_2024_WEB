@@ -105,27 +105,6 @@ $(function () {
     teamTL.from(".team-list li figure", { autoAlpha: 0, rotation: 30, y: -100, stagger: 0.2 }, "<");
     teamTL.from(".team-list li dl", { autoAlpha: 0, y: -50, stagger: 0.2 }, "<");
 
-    // 4. work 영역 애니메이션
-    const workImg = gsap.utils.toArray(".work-con figure img");
-    console.log(workImg);
-
-    workImg.forEach((item, index) => {
-        gsap.timeline({
-            scrollTrigger: {
-                trigger: item,
-                start: "top 50%",
-                end: "bottom 0%",
-                markers: true,
-            },
-        }).from(item, { x: -50, autoAlpha: 0, delay: index * 0.2 });
-    });
-    // 스크롤바가 상단으로 이동하면 동영상 다시 재생시키기
-    $(window).on("scroll", function () {
-        const scrollTop = $(this).scrollTop();
-
-        if (scrollTop === 0) video.play();
-    });
-
     // css 변경도 가능함
     teamTL.to(".team", { backgroundColor: "#f59", duration: 3 });
 
@@ -148,5 +127,25 @@ $(function () {
                 start: "top 50%",
             },
         });
+    });
+    // 4. work 영역 애니메이션
+    const workImg = gsap.utils.toArray(".work-con figure img");
+    console.log(workImg);
+
+    workImg.forEach((item, index) => {
+        gsap.timeline({
+            scrollTrigger: {
+                trigger: item,
+                start: "top 50%",
+                end: "bottom 0%",
+                markers: true,
+            },
+        }).from(item, { x: -50, autoAlpha: 0, delay: index * 0.2 });
+    });
+    // 스크롤바가 상단으로 이동하면 동영상 다시 재생시키기
+    $(window).on("scroll", function () {
+        const scrollTop = $(this).scrollTop();
+
+        if (scrollTop === 0) video.play();
     });
 });

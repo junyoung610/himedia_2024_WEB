@@ -1,0 +1,44 @@
+/* 기본 스타일 (화이트 모드) */
+body {
+    background-color: white;
+    color: black;
+    font-family: Arial, sans-serif;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.container {
+    text-align: center;
+    padding: 50px;
+}
+
+/* 다크 모드 스타일 */
+body.dark-mode {
+    background-color: #121212;
+    color: white;
+}
+
+/* 버튼 스타일 */
+button {
+    padding: 10px 20px;
+    font-size: 20px;
+    cursor: pointer;
+    border: none;
+    background-color: transparent;
+    color: inherit;
+    transition: background-color 0.3s;
+    border-radius: 50%;
+}
+
+button:hover {
+    background-color: rgba(255, 255, 255, 0.2);
+}
+
+/* 아이콘 스타일 */
+button i {
+    font-size: 24px;
+    transition: transform 0.3s ease-in-out;
+}
+
+body.dark-mode button i {
+    transform: rotate(180deg); /* 아이콘 회전 효과 */
+}
