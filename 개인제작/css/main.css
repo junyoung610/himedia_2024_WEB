@@ -1,6 +1,54 @@
 @charset 'utf-8';
 
-.box {
-    width: 100%;
-    background: #5f5;
+.link-list {
+    display: flex;
+    justify-content: space-between;
+}
+
+.link-list li {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    width: 170px;
+    height: 170px;
+    background: #fff;
+    border: 1px solid #000;
+    border-radius: 50%;
+}
+
+.link-list li a {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    padding: 3rem;
+
+    font-weight: 700;
+    font-size: 5rem;
+
+    transition: 0.4s;
+}
+
+.link-list li a strong {
+    font-size: 1.8rem;
+}
+
+.link-list li:nth-child(1):hover {
+    background: #f00;
+    color: #fff;
+}
+
+/* 반응형 스타일 */
+@media (max-width: 1024px) {
+    .link-list {
+        padding: 1rem;
+        flex-wrap: wrap;
+        gap: 2rem 0;
+    }
+    .link-list li {
+        width: 200px;
+        height: 200px;
+    }
 }

@@ -1,0 +1,229 @@
+소셜 로그인 연동은 다양한 플랫폼 (예: Google, Facebook, Kakao 등)을 사용해 사용자가 자신의 계정으로 로그인할 수 있게 해주는 방법입니다. 이를 통해 사용자 경험을 향상시키고 로그인 과정을 간소화할 수 있습니다. 각 소셜 로그인 서비스는 API를 제공하여 인증 프로세스를 처리할 수 있도록 돕습니다.
+
+다양한 소셜 로그인 서비스를 연동하는 방법을 순차적으로 설명하겠습니다.
+
+### 1. **Google 로그인 연동 방법**
+
+Google 로그인 연동을 위해서는 Google API 콘솔에서 클라이언트 ID를 발급받고, JavaScript SDK나 OAuth 2.0 프로토콜을 사용하여 로그인 절차를 처리합니다.
+
+#### 1.1. Google API 콘솔에서 클라이언트 ID 발급
+1. [Google Cloud Console](https://console.developers.google.com/)에 로그인 후 프로젝트를 생성합니다.
+2. **APIs & Services** -> **OAuth consent screen**에서 애플리케이션의 정보를 설정합니다.
+3. **Credentials** -> **Create Credentials** -> **OAuth client ID**를 선택합니다.
+4. **Web application**을 선택하고, 승인된 리디렉션 URI에 해당하는 URL을 입력합니다 (예: `http://localhost:3000/auth/google/callback`).
+
+#### 1.2. HTML 및 JavaScript 코드
+```html
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Google 로그인</title>
+  <script src="https://apis.google.com/js/platform.js" async defer></script>
+  <script>
+    function onSignIn(googleUser) {
+      var profile = googleUser.getBasicProfile();
+      var id_token = googleUser.getAuthResponse().id_token;
+      
+      // 백엔드 서버로 토큰을 전송
+      console.log('ID Token: ' + id_token);
+      
+      // 서버에 로그인 요청을 보내는 로직을 추가합니다.
+      // 예: fetch('/auth/google', { method: 'POST', body: JSON.stringify({ token: id_token }) });
+    }
+  </script>
+</head>
+<body>
+  <div class="g-signin2" data-onsuccess="onSignIn"></div>
+</body>
+</html>
+```
+
+#### 1.3. 서버 사이드 처리 (Node.js 예시)
+```javascript
+const express = require('express');
+const { OAuth2Client } = require('google-auth-library');
+const app = express();
+const client = new OAuth2Client(CLIENT_ID);  // Google API 콘솔에서 발급받은 클라이언트 ID
+
+app.post('/auth/google', async (req, res) => {
+  const { token } = req.body;
+
+  const ticket = await client.verifyIdToken({
+    idToken: token,
+    audience: CLIENT_ID,  // Google에서 제공한 클라이언트 ID
+  });
+
+  const payload = ticket.getPayload();
+  const userId = payload['sub'];
+  // 사용자 정보를 DB에 저장하거나 세션에 저장할 수 있습니다.
+
+  res.status(200).send({ message: 'Google 로그인 성공' });
+});
+
+app.listen(3000, () => {
+  console.log('서버 실행 중...');
+});
+```
+
+### 2. **Facebook 로그인 연동 방법**
+
+Facebook 로그인은 Facebook 개발자 콘솔에서 앱을 만들고, 해당 앱의 **App ID**와 **App Secret**을 이용해 OAuth 인증을 처리합니다.
+
+#### 2.1. Facebook 개발자 콘솔에서 앱 생성
+1. [Facebook for Developers](https://developers.facebook.com/)에 로그인 후, **My Apps** -> **Create App**을 선택합니다.
+2. **Facebook Login**을 선택하고, 웹사이트 URL을 설정합니다.
+
+#### 2.2. HTML 및 JavaScript 코드
+```html
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Facebook 로그인</title>
+  <script async defer crossorigin="anonymous" src="https://connect.facebook.net/en_US/sdk.js"></script>
+  <script>
+    window.fbAsyncInit = function() {
+      FB.init({
+        appId      : 'YOUR_APP_ID',  // Facebook 개발자 콘솔에서 발급받은 App ID
+        cookie     : true,
+        xfbml      : true,
+        version    : 'v12.0'
+      });
+
+      FB.AppEvents.logPageView();
+    };
+
+    function loginWithFacebook() {
+      FB.login(function(response) {
+        if (response.authResponse) {
+          FB.api('/me', {fields: 'name,email'}, function(response) {
+            console.log('로그인 성공: ' + response.name);
+            // 백엔드 서버로 액세스 토큰을 보내서 로그인 처리
+          });
+        } else {
+          console.log('로그인 취소');
+        }
+      }, {scope: 'email'});
+    }
+  </script>
+</head>
+<body>
+  <button onclick="loginWithFacebook()">Facebook 로그인</button>
+</body>
+</html>
+```
+
+#### 2.3. 서버 사이드 처리 (Node.js 예시)
+```javascript
+const express = require('express');
+const axios = require('axios');
+const app = express();
+
+app.post('/auth/facebook', async (req, res) => {
+  const { accessToken } = req.body;
+
+  // Facebook 사용자 정보 요청
+  const response = await axios.get(`https://graph.facebook.com/me?access_token=${accessToken}&fields=id,name,email`);
+
+  const user = response.data;
+  // 사용자 정보를 DB에 저장하거나 세션에 저장할 수 있습니다.
+
+  res.status(200).send({ message: 'Facebook 로그인 성공', user });
+});
+
+app.listen(3000, () => {
+  console.log('서버 실행 중...');
+});
+```
+
+### 3. **카카오톡 로그인 연동 방법**
+
+카카오는 [카카오 개발자 사이트](https://developers.kakao.com/)에서 앱을 등록하고, `REST API 키`를 사용하여 카카오 로그인 API를 호출합니다.
+
+#### 3.1. 카카오 개발자 사이트에서 앱 등록
+1. [카카오 개발자 사이트](https://developers.kakao.com/)에 로그인 후 앱을 생성합니다.
+2. **앱 키**에서 `REST API 키`를 확인합니다.
+
+#### 3.2. HTML 및 JavaScript 코드
+```html
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>카카오 로그인</title>
+  <script src="https://developers.kakao.com/sdk/js/kakao.js"></script>
+  <script>
+    Kakao.init('YOUR_APP_KEY');  // 카카오 개발자에서 발급받은 JavaScript 키
+
+    function loginWithKakao() {
+      Kakao.Auth.login({
+        success: function(authObj) {
+          console.log(authObj);
+          // 로그인 성공 후 사용자 정보를 서버로 전달하는 코드 작성
+          Kakao.API.request({
+            url: '/v2/user/me',
+            success: function(res) {
+              console.log(res);
+              // 백엔드 서버로 사용자 정보 전달
+            },
+            fail: function(error) {
+              console.log(error);
+            }
+          });
+        },
+        fail: function(err) {
+          alert(JSON.stringify(err));
+        }
+      });
+    }
+  </script>
+</head>
+<body>
+  <button onclick="loginWithKakao()">카카오 로그인</button>
+</body>
+</html>
+```
+
+#### 3.3. 서버 사이드 처리 (Node.js 예시)
+```javascript
+const express = require('express');
+const axios = require('axios');
+const app = express();
+
+app.post('/auth/kakao', async (req, res) => {
+  const { accessToken } = req.body;
+
+  // 카카오 사용자 정보 요청
+  const response = await axios.get('https://kapi.kakao.com/v2/user/me', {
+    headers: { Authorization: `Bearer ${accessToken}` }
+  });
+
+  const user = response.data;
+  // 사용자 정보를 DB에 저장하거나 세션에 저장할 수 있습니다.
+
+  res.status(200).send({ message: '카카오 로그인 성공', user });
+});
+
+app.listen(3000, () => {
+  console.log('서버 실행 중...');
+});
+```
+
+### 4. **소셜 로그인 통합 관리**
+
+- 여러 소셜 로그인 서비스를 연동할 때는 각 플랫폼에 대한 API 키 및 클라이언트 정보를 관리해야 합니다.
+- 로그인 후에 인증 토큰을 서버로 전달하고, 서버에서는 이를 검증하여 사용자 정보를 처리합니다.
+- 로그인 정보를 통합하여 회원가입 및 로그인 절차를 처리하고, 각 소셜 로그인 서비스의 사용자 정보를 활용할 수 있습니다.
+
+### 5. **보안**
+
+- 소셜 로그인 연동 시 사용자 인증에 민감한 정보(예: 액세스 토큰 등)를 다루므로 HTTPS를 사용해야 하며, 토큰을 안전하게 관리해야 합니다.
+- 인증 토큰을 저장할 때에는 세션 또는 데이터베이스에서 암호화된 상태로 저장하는 것이 좋습니다.
+
+### 결론
+
+소셜 로그인 연동은 각 플랫폼의 제공하는 SDK 또는 API를 활용하여 사용자가 외부 계정을 통해 손쉽게 로그인할 수 있도록 구현하는 것입니다. 구현 시 인증 절차와 보안에 신경을 쓰며, 필요한 데이터만을 안전하게 처리하도록 해야 합니다.

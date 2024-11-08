@@ -6,6 +6,8 @@
     position: relative;
     align-items: center;
     width: 100%;
+
+    z-index: 1000;
 }
 
 /* user-info */
@@ -13,6 +15,9 @@
 .user-info {
     background: #f00;
     text-align: right;
+
+    display: flex;
+    justify-content: flex-end;
 }
 .login,
 .join {
@@ -162,9 +167,17 @@
         font-size: 2.2rem;
     }
 
+    .user-info-M {
+        position: absolute;
+        top: 100%;
+        right: 0%;
+    }
+
     .user-info-M.active {
         display: block;
         z-index: 100;
+
+        display: flex;
     }
     .gnb.active > .user-info-M {
         display: block;
@@ -190,8 +203,9 @@
 
     .gnb > ul {
         flex-direction: column;
-        padding: 130px 20px 20px;
+        padding: 130px 0;
         position: relative;
+        top: 3%;
     }
 
     .gnb > ul > li {
@@ -227,10 +241,14 @@
     .Mobile-nav {
         display: block;
         position: absolute;
-        right: 0;
+        right: 0%;
         display: flex;
         gap: 10px;
         flex-direction: column;
         align-items: flex-end;
+    }
+
+    body.dark-mode > #header > .inner > .header-wrap > .gnb {
+        background: #000;
     }
 }

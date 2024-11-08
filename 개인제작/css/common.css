@@ -64,3 +64,10 @@ section {
     width: 90%;
     margin: 0 auto;
 }
+
+/* 반응형 스타일 */
+@media (max-width: 1024px) {
+    section {
+        padding: 5rem 0;
+    }
+}

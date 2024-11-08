@@ -3,7 +3,8 @@
     <head>
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <title>Document</title>
+        <title>회원가입</title>
+
         <!-- 레믹스아이콘 사용 Link -->
         <link href="https://cdn.jsdelivr.net/npm/remixicon@4.5.0/fonts/remixicon.css" rel="stylesheet" />
 
@@ -19,8 +20,10 @@
         <link rel="stylesheet" href="./css/common.css" />
         <link rel="stylesheet" href="./css/header.css" />
         <link rel="stylesheet" href="./css/footer.css" />
+
         <!-- 위 페이지 CSS -->
-        <link rel="stylesheet" href="./css/main.css" />
+        <link rel="stylesheet" href="login&join.css" />
+
         <!-- 모바일 GNB js -->
         <script src="./js/header-nav.js"></script>
 
@@ -37,7 +40,7 @@
                 </div>
                 <div class="header-wrap">
                     <h1 class="logo">
-                        <a href="#"><img src="" alt="" /></a>
+                        <a href="./index.html"><img src="" alt="" /></a>
                     </h1>
                     <!-- PC-nav -->
                     <nav class="gnb">
@@ -131,77 +134,29 @@
                 </div>
             </div>
         </header>
-
-        <main id="main">
-            <div class="dark-container">
-                <button id="mode-toggle">
-                    <i class="ri-sun-fill"></i>
-                </button>
-            </div>
-            <!-- Swiper -->
-            <div class="Swiper">
-                <div class="inner">
-                    <div class="swiper mySwiper">
-                        <div class="swiper-wrapper">
-                            <div class="swiper-slide">
-                                <img src="./img/pic1.png" alt="" />
-                            </div>
-                            <div class="swiper-slide">Slide 2</div>
-                            <div class="swiper-slide">Slide 3</div>
-                            <div class="swiper-slide">Slide 4</div>
-                            <div class="swiper-slide">Slide 5</div>
-                            <div class="swiper-slide">Slide 6</div>
-                            <div class="swiper-slide">Slide 7</div>
-                            <div class="swiper-slide">Slide 8</div>
-                            <div class="swiper-slide">Slide 9</div>
+        <main>
+            <section>
+                <div class="form-container">
+                    <h2>로그인</h2>
+                    <form action="/login" method="POST">
+                        <div class="input-group">
+                            <label for="username">이메일 또는 아이디</label>
+                            <input type="text" id="username" name="username" required />
                         </div>
-                        <div class="swiper-button-next"></div>
-                        <div class="swiper-button-prev"></div>
-                        <!-- <div class="swiper-pagination"></div> -->
-                    </div>
-                </div>
-            </div>
 
-            <section class="link">
-                <div class="inner">
-                    <ul class="link-list">
-                        <li>
-                            <a href="">
-                                <i class="ri-youtube-fill"></i>
-                                <strong>YOUTUBE</strong>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="">
-                                <i class="ri-youtube-fill"></i>
-                                <strong>YOUTUBE</strong>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="">
-                                <i class="ri-youtube-fill"></i>
-                                <strong>YOUTUBE</strong>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="">
-                                <i class="ri-youtube-fill"></i>
-                                <strong>YOUTUBE</strong>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="">
-                                <i class="ri-youtube-fill"></i>
-                                <strong>YOUTUBE</strong>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="">
-                                <i class="ri-youtube-fill"></i>
-                                <strong>YOUTUBE</strong>
-                            </a>
-                        </li>
-                    </ul>
+                        <div class="input-group">
+                            <label for="password">비밀번호</label>
+                            <input type="password" id="password" name="password" required />
+                        </div>
+
+                        <div class="form-actions">
+                            <button type="submit">로그인</button>
+                        </div>
+
+                        <div class="form-footer">
+                            <p>회원이 아니신가요? <a href="signup.html">회원가입</a></p>
+                        </div>
+                    </form>
                 </div>
             </section>
         </main>
